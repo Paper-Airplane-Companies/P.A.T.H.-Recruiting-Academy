@@ -6,17 +6,175 @@
   <title>Services | P.A.T.H. Recruiting Academy</title>
   <meta
     name="description"
-    content="Explore the services offered by P.A.T.H. Recruiting Academy, including recruiter training, candidate discovery frameworks, phone screen systems, hiring manager alignment, and recruiting playbooks."
+    content="Explore services from P.A.T.H. Recruiting Academy including recruiter training, framework implementation, phone screen design, hiring manager alignment, playbooks, and consulting support."
   />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-hero,
+    .services-section,
+    .services-cta {
+      padding: 72px 20px;
+    }
+
+    .services-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .services-hero h1,
+    .services-section h2,
+    .services-cta h2 {
+      margin-bottom: 16px;
+    }
+
+    .services-hero p,
+    .services-section p,
+    .services-cta p {
+      max-width: 780px;
+    }
+
+    .services-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .services-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 39, 71, 0.12);
+      background: #ffffff;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .services-grid,
+    .services-fit-grid,
+    .services-process-grid,
+    .services-cta-grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-fit-grid,
+    .services-process-grid,
+    .services-cta-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .services-card,
+    .services-fit-card,
+    .services-process-card,
+    .services-cta-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 39, 71, 0.1);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 12px 28px rgba(15, 39, 71, 0.06);
+    }
+
+    .services-card h3,
+    .services-fit-card h3,
+    .services-process-card h3,
+    .services-cta-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--navy-deep);
+    }
+
+    .services-card p,
+    .services-fit-card p,
+    .services-process-card p,
+    .services-cta-card p {
+      margin-bottom: 0;
+      line-height: 1.7;
+      color: var(--slate);
+    }
+
+    .services-card ul {
+      margin: 18px 0 0;
+      padding-left: 20px;
+    }
+
+    .services-card li {
+      margin-bottom: 10px;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    .services-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .services-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .services-note {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: var(--light-slate);
+    }
+
+    @media (max-width: 980px) {
+      .services-grid,
+      .services-fit-grid,
+      .services-process-grid,
+      .services-cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-hero,
+      .services-section,
+      .services-cta {
+        padding: 56px 20px;
+      }
+
+      .services-card,
+      .services-fit-card,
+      .services-process-card,
+      .services-cta-card {
+        padding: 24px;
+      }
+
+      .services-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .services-actions .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
         <a href="index.html" class="brand">
-          <span class="brand-mark">P.A.T.H.</span>
-          <span class="brand-text">Recruiting Academy</span>
+          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
+          <div class="brand-copy">
+            <span class="brand-mark">P.A.T.H.</span>
+            <span class="brand-text">Recruiting Academy</span>
+          </div>
         </a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
@@ -28,7 +186,8 @@
         <nav class="site-nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
+          <a href="framework.html">Framework</a>
+          <a href="services.html" aria-current="page">Services</a>
           <a href="contact.html" class="nav-button">Contact</a>
         </nav>
       </div>
@@ -36,250 +195,238 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
+    <section class="services-hero section-light">
+      <div class="services-wrap">
         <p class="eyebrow">Services</p>
-        <h1>Practical recruiting solutions built around better conversations.</h1>
+        <h1>Practical ways to bring P.A.T.H. into your recruiting team.</h1>
         <p>
-          P.A.T.H. Recruiting Academy helps recruiting teams improve hiring outcomes by strengthening the
-          recruiter conversation, the candidate discovery process, and the consistency of execution across
-          the hiring funnel.
+          P.A.T.H. Recruiting Academy is built to help recruiting leaders and teams improve how recruiter
+          conversations are structured, coached, and used to drive better hiring outcomes. These services
+          are designed to move from theory into practical implementation.
         </p>
+
+        <div class="services-badges" aria-label="Service themes">
+          <span class="services-badge">Training</span>
+          <span class="services-badge">Implementation</span>
+          <span class="services-badge">Phone Screen Design</span>
+          <span class="services-badge">Recruiting Playbooks</span>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">How P.A.T.H. helps</p>
-          <h2>Support designed for real recruiting teams and real hiring pressure.</h2>
-          <p>
-            These services are built to improve recruiter confidence, candidate engagement, process quality,
-            and the hiring KPIs too many teams leave to chance.
-          </p>
-        </div>
+    <section class="services-section">
+      <div class="services-wrap">
+        <p class="eyebrow">Core service offers</p>
+        <h2>Clear ways to improve recruiter execution, consistency, and alignment.</h2>
+        <p>
+          These are the most direct ways P.A.T.H. can support your organization. Some teams need training.
+          Others need structure. Others need help redesigning how recruiter conversations are happening today.
+        </p>
 
         <div class="services-grid">
-          <article class="info-card">
-            <h3>Recruiter Training Programs</h3>
+          <article class="services-card">
+            <span class="services-label">Service 1</span>
+            <h3>Recruiter Training Workshops</h3>
             <p>
-              Train recruiters to lead more structured, consultative, and outcome-focused candidate
-              conversations that move beyond basic job pitching.
+              Train recruiters to lead more consultative, structured, and effective candidate conversations
+              that improve discovery, alignment, and next-step quality.
             </p>
+            <ul>
+              <li>P.A.T.H. conversation model overview</li>
+              <li>Question-driven recruiting approach</li>
+              <li>Candidate discovery and motivation work</li>
+              <li>Live examples and practical application</li>
+            </ul>
           </article>
 
-          <article class="info-card">
-            <h3>Candidate Discovery Frameworks</h3>
+          <article class="services-card">
+            <span class="services-label">Service 2</span>
+            <h3>Framework Implementation Support</h3>
             <p>
-              Give recruiters a practical questioning structure that helps uncover motivation, dissatisfaction,
-              priorities, and true fit.
+              Put a repeatable conversation structure in place that recruiters can actually use and leaders
+              can coach across the team.
             </p>
+            <ul>
+              <li>Framework customization by team need</li>
+              <li>Recruiter usage guidance</li>
+              <li>Manager and leader coaching support</li>
+              <li>Practical roll-out structure</li>
+            </ul>
           </article>
 
-          <article class="info-card">
-            <h3>Phone Screen Systems</h3>
+          <article class="services-card">
+            <span class="services-label">Service 3</span>
+            <h3>Phone Screen Design</h3>
             <p>
-              Build stronger early-stage conversations that improve qualification, next-step quality, and
-              candidate alignment before interviews happen.
+              Redesign early-stage recruiter conversations so qualification, candidate engagement, and
+              handoff quality improve before interviews ever begin.
             </p>
+            <ul>
+              <li>Phone screen structure</li>
+              <li>Candidate discovery flow</li>
+              <li>Transition language and alignment points</li>
+              <li>Role-specific question design</li>
+            </ul>
           </article>
 
-          <article class="info-card">
-            <h3>Objection Handling Support</h3>
+          <article class="services-card">
+            <span class="services-label">Service 4</span>
+            <h3>Hiring Manager Alignment Tools</h3>
             <p>
-              Replace rebuttals and pressure with better questions that help candidates think through concerns,
-              hesitation, and timing.
+              Improve how recruiting and hiring leaders align on role expectations, candidate signals, and
+              what quality actually looks like in the process.
             </p>
+            <ul>
+              <li>Intake meeting structure</li>
+              <li>Alignment questions</li>
+              <li>Success profile clarification</li>
+              <li>Interview handoff support</li>
+            </ul>
           </article>
 
-          <article class="info-card">
-            <h3>Hiring Manager Alignment</h3>
+          <article class="services-card">
+            <span class="services-label">Service 5</span>
+            <h3>Recruiting Playbooks and Toolkits</h3>
             <p>
-              Strengthen the partnership between recruiting and hiring leaders through better intake, role
-              clarity, and alignment around what good looks like.
+              Give your team usable materials that turn the framework into daily execution instead of
+              something that only lives in training.
             </p>
+            <ul>
+              <li>Conversation guides</li>
+              <li>Question libraries</li>
+              <li>Phone screen templates</li>
+              <li>Objection handling frameworks</li>
+            </ul>
           </article>
 
-          <article class="info-card">
-            <h3>Playbooks and Toolkits</h3>
+          <article class="services-card">
+            <span class="services-label">Service 6</span>
+            <h3>Advisory and Consulting Support</h3>
             <p>
-              Turn the methodology into practical tools your team can actually use in live recruiting
-              conversations and hiring workflows.
+              Work through broader recruiting process issues where conversation quality, recruiter execution,
+              and process alignment are affecting hiring performance.
             </p>
+            <ul>
+              <li>Team-level recruiting review</li>
+              <li>Execution gap analysis</li>
+              <li>Process quality support</li>
+              <li>Strategy discussion and guidance</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Service categories</p>
-          <h2>What a P.A.T.H. engagement can include.</h2>
-          <p>
-            Each organization is different, but the support typically centers around training, implementation,
-            process design, and practical recruiter enablement.
-          </p>
-        </div>
+    <section class="services-section section-light">
+      <div class="services-wrap">
+        <p class="eyebrow">Best fit</p>
+        <h2>Who these services are designed for.</h2>
+        <p>
+          P.A.T.H. is a strong fit for organizations that care about improving the quality of the recruiting
+          conversation, not just increasing activity volume.
+        </p>
 
-        <div class="three-column-grid">
-          <article class="content-card">
-            <h3>Training & Development</h3>
-            <p>
-              Structured recruiter training focused on candidate discovery, conversation control, objection
-              handling, and hiring alignment.
-            </p>
-          </article>
-
-          <article class="content-card">
-            <h3>Framework Design</h3>
-            <p>
-              Customized conversation flows, phone screen structures, and question sets built to support
-              better recruiter execution.
-            </p>
-          </article>
-
-          <article class="content-card">
-            <h3>Process Improvement</h3>
-            <p>
-              A better recruiting process starts with better conversations. P.A.T.H. helps strengthen the parts
-              of recruiting that influence quality throughout the funnel.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container two-column-layout">
-        <div>
-          <p class="eyebrow">Key focus areas</p>
-          <h2>Built to improve the recruiting outcomes that matter.</h2>
-          <p>
-            P.A.T.H. services are not centered on theory alone. The goal is to improve the practical areas of
-            recruiting that affect candidate movement, team consistency, and hiring quality.
-          </p>
-        </div>
-
-        <div class="checklist-card">
-          <ul class="check-list">
-            <li>Better recruiter conversation quality</li>
-            <li>More consistent phone screens</li>
-            <li>Stronger candidate engagement</li>
-            <li>Improved hiring manager alignment</li>
-            <li>Better interview quality</li>
-            <li>Stronger overall hiring outcomes</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-heading section-heading-center">
-          <p class="eyebrow">Ideal fit</p>
-          <h2>Who these services are designed for.</h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
+        <div class="services-fit-grid">
+          <article class="services-fit-card">
             <h3>Internal Recruiting Teams</h3>
             <p>
-              For organizations that want more consistency, better recruiter development, and stronger process
-              quality across the recruiting function.
+              Teams that want more structure, better phone screens, stronger discovery, and more consistency
+              across recruiters.
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="services-fit-card">
             <h3>Talent Acquisition Leaders</h3>
             <p>
-              For leaders who want a more structured and measurable recruiting approach tied to real hiring
-              outcomes.
+              Leaders who want a framework they can coach, reinforce, and use to improve recruiting execution.
             </p>
           </article>
 
-          <article class="service-card">
-            <h3>Growing Companies</h3>
+          <article class="services-fit-card">
+            <h3>Growing Organizations</h3>
             <p>
-              For businesses building or upgrading their recruiting process and looking for a repeatable
-              conversation framework that scales.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <h3>Hiring Teams Under Pressure</h3>
-            <p>
-              For teams that need to improve quality, reduce wasted effort, and create stronger alignment in
-              the funnel.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <h3>Recruiter Managers</h3>
-            <p>
-              For managers who want coaching tools, clear frameworks, and better ways to develop recruiter
-              performance.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <h3>Organizations Focused on ROI</h3>
-            <p>
-              For companies that want recruiting to drive better business outcomes through better process
-              quality, not just more activity.
+              Companies that need a better process as hiring pressure rises and the cost of weak conversations
+              becomes more visible.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What improves</p>
-          <h2>The measurable outcomes behind better recruiter conversations.</h2>
-          <p>
-            Stronger recruiter conversations create leverage throughout the process. These are the areas P.A.T.H.
-            is designed to help improve.
-          </p>
-        </div>
-
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <h3>Candidate Engagement</h3>
-            <p>More meaningful, better-structured conversations from the start.</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>Recruiter Consistency</h3>
-            <p>A stronger framework recruiters can use across roles and teams.</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>Interview Alignment</h3>
-            <p>Better handoffs and better expectations between candidates and hiring teams.</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>Hiring ROI</h3>
-            <p>Less wasted effort and better quality throughout the recruiting process.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section final-cta-section">
-      <div class="container final-cta-card">
-        <p class="eyebrow">Next step</p>
-        <h2>Build a recruiting process that starts with better conversations.</h2>
+    <section class="services-section">
+      <div class="services-wrap">
+        <p class="eyebrow">How engagement can start</p>
+        <h2>Not every team needs the same first step.</h2>
         <p>
-          Review the approach, explore the framework, and take the next step toward a more structured and
-          effective recruiting model.
+          Some teams want a workshop first. Some want a framework overview. Some want to talk through what is
+          not working in their current recruiter conversations before deciding what support makes sense.
         </p>
-        <div class="hero-actions center-actions">
-          <a href="about.html" class="button button-secondary">Learn About P.A.T.H.</a>
+
+        <div class="services-process-grid">
+          <article class="services-process-card">
+            <h3>Start with a Framework Review</h3>
+            <p>
+              Best for teams that want to understand the model and see whether it fits their recruiting environment.
+            </p>
+          </article>
+
+          <article class="services-process-card">
+            <h3>Start with Training</h3>
+            <p>
+              Best for teams that already know recruiter conversation quality needs to improve and want practical help fast.
+            </p>
+          </article>
+
+          <article class="services-process-card">
+            <h3>Start with a Process Conversation</h3>
+            <p>
+              Best for leaders who want to talk through gaps first and identify which service area matters most.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-cta">
+      <div class="services-wrap">
+        <p class="eyebrow">Next step</p>
+        <h2>Choose the next step that fits your team best.</h2>
+        <p>
+          Whether you want to review the framework first or start a conversation about your recruiting team,
+          this is where to move next.
+        </p>
+
+        <div class="services-cta-grid">
+          <article class="services-cta-card">
+            <h3>Explore the Framework</h3>
+            <p>
+              Read how the P.A.T.H. model works and how the conversation structure is designed.
+            </p>
+          </article>
+
+          <article class="services-cta-card">
+            <h3>Request More Information</h3>
+            <p>
+              Use the contact page to request the framework overview or ask about service support.
+            </p>
+          </article>
+
+          <article class="services-cta-card">
+            <h3>Start a Conversation</h3>
+            <p>
+              Share what your team wants to improve so the right next step is clearer.
+            </p>
+          </article>
+        </div>
+
+        <div class="services-actions">
+          <a href="framework.html" class="button button-secondary">Explore the Framework</a>
           <a href="contact.html" class="button button-primary">Go to Contact Page</a>
         </div>
+
+        <p class="services-note">
+          After this page is live, the next most important step is wiring your contact form into a real form backend or CRM.
+        </p>
       </div>
     </section>
   </main>
@@ -291,11 +438,14 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
-        <p class="footer-text">Better Recruiter Conversations. Better Hiring Outcomes.</p>
+        <p class="footer-text">
+          Better Recruiter Conversations. Better Hiring Outcomes.
+        </p>
       </div>
 
       <div class="footer-links">
         <a href="about.html">About</a>
+        <a href="framework.html">Framework</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
