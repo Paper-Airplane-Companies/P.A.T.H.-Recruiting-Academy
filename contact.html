@@ -4,8 +4,478 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | P.A.T.H. Recruiting Academy</title>
+  <meta
+    name="description"
+    content="Contact P.A.T.H. Recruiting Academy to discuss recruiter training, conversation frameworks, phone screen design, hiring manager alignment, and recruiting process improvement."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-hero,
+    .contact-section,
+    .contact-bottom {
+      padding: 72px 20px;
+    }
+
+    .contact-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .contact-hero h1,
+    .contact-section h2,
+    .contact-bottom h2 {
+      margin-bottom: 16px;
+    }
+
+    .contact-hero p,
+    .contact-section p,
+    .contact-bottom p {
+      max-width: 760px;
+    }
+
+    .contact-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.95rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 24px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .contact-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-field label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      color: inherit;
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    .contact-field input::placeholder,
+    .contact-field textarea::placeholder {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .contact-field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact-checks {
+      display: grid;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .contact-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .contact-check input {
+      margin-top: 4px;
+      accent-color: currentColor;
+    }
+
+    .contact-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-width: 220px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .contact-form-note {
+      font-size: 0.92rem;
+      opacity: 0.82;
+      margin-top: -4px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-list strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-mini-card {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .contact-mini-card p:last-child,
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-bottom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .contact-bottom-card {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-bottom-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid,
+      .contact-bottom-grid,
+      .contact-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-hero,
+      .contact-section,
+      .contact-bottom {
+        padding: 56px 20px;
+      }
+
+      .contact-card,
+      .contact-bottom-card {
+        padding: 22px;
+      }
+
+      .contact-submit {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Contact</h1>
+  <header>
+    <nav aria-label="Primary">
+      <a href="index.html">P.A.T.H. Recruiting Academy</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-wrap">
+        <p>Contact P.A.T.H.</p>
+        <h1>Start the conversation that improves the rest of the hiring process.</h1>
+        <p>
+          Whether you are looking for recruiter training, a stronger phone screen process,
+          better hiring manager alignment, or a practical framework your team can actually use,
+          this is the best place to start.
+        </p>
+
+        <div class="contact-badges" aria-label="Ideal client types">
+          <span class="contact-badge">Recruiting Leaders</span>
+          <span class="contact-badge">Internal Talent Teams</span>
+          <span class="contact-badge">Growing Companies</span>
+          <span class="contact-badge">Teams Focused on Hiring ROI</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-wrap">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h2>Tell me a little about your team.</h2>
+            <p>
+              Fill out the form below and share what you are trying to improve. You can request
+              a conversation, ask about services, or simply ask for the framework overview first.
+            </p>
+
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="name">Full name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div class="contact-field">
+                  <label for="email">Work email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@company.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="company">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Your company"
+                  />
+                </div>
+
+                <div class="contact-field">
+                  <label for="title">Your title</label>
+                  <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Talent Acquisition Leader, Recruiting Manager, etc."
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="team-size">Recruiting team size</label>
+                  <select id="team-size" name="team_size">
+                    <option value="">Select one</option>
+                    <option value="1">Just me</option>
+                    <option value="2-5">2–5 people</option>
+                    <option value="6-15">6–15 people</option>
+                    <option value="16-30">16–30 people</option>
+                    <option value="31+">31+ people</option>
+                  </select>
+                </div>
+
+                <div class="contact-field">
+                  <label for="primary-need">Primary need</label>
+                  <select id="primary-need" name="primary_need">
+                    <option value="">Select one</option>
+                    <option value="recruiter-training">Recruiter training</option>
+                    <option value="phone-screen-design">Phone screen design</option>
+                    <option value="conversation-framework">Conversation framework</option>
+                    <option value="objection-handling">Objection handling</option>
+                    <option value="hiring-manager-alignment">Hiring manager alignment</option>
+                    <option value="playbooks-toolkits">Playbooks and toolkits</option>
+                    <option value="consulting-support">Consulting support</option>
+                    <option value="not-sure-yet">Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="challenge">What is the biggest recruiting challenge you want to improve?</label>
+                <textarea
+                  id="challenge"
+                  name="challenge"
+                  placeholder="Examples: inconsistent phone screens, weak candidate engagement, poor interview alignment, low offer acceptance, recruiter confidence, manager intake quality..."
+                ></textarea>
+              </div>
+
+              <div class="contact-checks">
+                <label class="contact-check" for="framework-request">
+                  <input
+                    type="checkbox"
+                    id="framework-request"
+                    name="framework_request"
+                    value="Yes"
+                  />
+                  <span>Send me the free P.A.T.H. framework overview.</span>
+                </label>
+
+                <label class="contact-check" for="discovery-call">
+                  <input
+                    type="checkbox"
+                    id="discovery-call"
+                    name="discovery_call"
+                    value="Yes"
+                  />
+                  <span>I am open to a short discovery call about my team.</span>
+                </label>
+              </div>
+
+              <button class="contact-submit" type="submit">Submit Request</button>
+
+              <p class="contact-form-note">
+                Replace <strong>YOUR_FORM_ID</strong> with your Formspree form ID, or swap this
+                form block for your HubSpot embedded form when your CRM is ready.
+              </p>
+            </form>
+          </div>
+
+          <aside class="contact-card">
+            <h2>What happens next</h2>
+            <ul class="contact-list">
+              <li>
+                <strong>1. You share the need</strong>
+                I review what you want to improve in your recruiting process, team execution,
+                or candidate conversation quality.
+              </li>
+              <li>
+                <strong>2. We identify the right fit</strong>
+                That may be training, framework design, phone screen support, manager alignment,
+                or a larger playbook buildout.
+              </li>
+              <li>
+                <strong>3. We decide the best next step</strong>
+                That could be a conversation, a framework review, or a service discussion based on
+                what your team actually needs.
+              </li>
+            </ul>
+
+            <div class="contact-mini-card">
+              <h3>Good fit for P.A.T.H.</h3>
+              <p>
+                Teams that want stronger recruiter conversations, more consistency across recruiters,
+                better candidate discovery, and better hiring outcomes tied to process quality.
+              </p>
+            </div>
+
+            <div class="contact-mini-card">
+              <h3>Not ready to talk yet?</h3>
+              <p>
+                That is fine. Use the form to request the framework overview first so you can review
+                the approach before deciding whether a conversation makes sense.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-bottom">
+      <div class="contact-wrap">
+        <p>Common reasons teams reach out</p>
+        <h2>Where P.A.T.H. can help first</h2>
+        <p>
+          Most conversations start with one practical problem: recruiter inconsistency, weak phone
+          screens, too much job pitching, unclear candidate motivation, or hiring manager disconnect.
+        </p>
+
+        <div class="contact-bottom-grid">
+          <div class="contact-bottom-card">
+            <h3>Recruiter Training</h3>
+            <p>
+              Build stronger recruiter control, candidate discovery, and more consistent execution.
+            </p>
+          </div>
+
+          <div class="contact-bottom-card">
+            <h3>Phone Screen Design</h3>
+            <p>
+              Improve qualification quality, better next-step decisions, and stronger early alignment.
+            </p>
+          </div>
+
+          <div class="contact-bottom-card">
+            <h3>Framework Buildout</h3>
+            <p>
+              Turn your recruiting approach into a practical structure your team can use every day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="index.html">P.A.T.H. Recruiting Academy</a>
+      <p>Better Recruiter Conversations. Better Hiring Outcomes.</p>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p>Florida-based, serving teams nationwide</p>
+    </div>
+  </footer>
 </body>
 </html>
