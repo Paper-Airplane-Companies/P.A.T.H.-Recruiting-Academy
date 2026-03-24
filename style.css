@@ -78,10 +78,17 @@ select {
 
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.45rem;
+  align-items: center;
+  gap: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
 .brand-mark {
@@ -602,9 +609,19 @@ select {
   align-items: center;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .footer-brand .brand-mark,
 .footer-brand .brand-text {
   color: var(--white);
+}
+
+.footer-brand .site-logo {
+  height: 52px;
 }
 
 .footer-text,
@@ -802,6 +819,10 @@ select {
   .center-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .site-logo {
+    height: 52px;
   }
 
   .brand-mark {
