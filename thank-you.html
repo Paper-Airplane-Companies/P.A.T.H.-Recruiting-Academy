@@ -4,8 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | P.A.T.H. Recruiting Academy</title>
+  <meta
+    name="description"
+    content="Thank you for reaching out to P.A.T.H. Recruiting Academy."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thankyou-section {
+      padding: 88px 20px;
+      min-height: calc(100vh - 220px);
+      display: flex;
+      align-items: center;
+    }
+
+    .thankyou-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .thankyou-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 39, 71, 0.1);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 16px 36px rgba(15, 39, 71, 0.08);
+      text-align: center;
+    }
+
+    .thankyou-card h1 {
+      margin: 12px 0 16px;
+      color: var(--navy-deep);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.08;
+    }
+
+    .thankyou-card p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--slate);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .thankyou-note {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: var(--light-slate);
+    }
+
+    @media (max-width: 700px) {
+      .thankyou-card {
+        padding: 28px;
+      }
+
+      .thankyou-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .thankyou-actions .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Thank You</h1>
+  <header class="site-header">
+    <div class="container">
+      <div class="topbar">
+        <a href="index.html" class="brand">
+          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
+          <div class="brand-copy">
+            <span class="brand-mark">P.A.T.H.</span>
+            <span class="brand-text">Recruiting Academy</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="framework.html">Framework</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="thankyou-section section-light">
+      <div class="thankyou-wrap">
+        <div class="thankyou-card">
+          <p class="eyebrow">Thank you</p>
+          <h1>Your request has been received.</h1>
+          <p>
+            Thanks for taking the next step with P.A.T.H. Recruiting Academy. Right now this page is
+            part of the site flow while the form is still waiting to be connected to a real backend or CRM.
+            Once we wire that up, this step will become part of your actual lead capture process.
+          </p>
+
+          <div class="thankyou-actions">
+            <a href="framework.html" class="button button-secondary">Explore the Framework</a>
+            <a href="services.html" class="button button-primary">View Services</a>
+          </div>
+
+          <p class="thankyou-note">
+            Next build step after this: connect the contact form to Formspree or HubSpot so submissions are captured automatically.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <span class="brand-mark">P.A.T.H.</span>
+          <span class="brand-text">Recruiting Academy</span>
+        </a>
+        <p class="footer-text">
+          Better Recruiter Conversations. Better Hiring Outcomes.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="framework.html">Framework</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-location">
+        <p>Florida-based, serving teams nationwide</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
