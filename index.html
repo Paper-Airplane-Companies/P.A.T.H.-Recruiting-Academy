@@ -9,6 +9,19 @@
     content="P.A.T.H. Recruiting Academy helps recruiting teams improve hiring outcomes through better recruiter conversations, stronger candidate discovery, and more consistent hiring processes."
   />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .trust-logo-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 760px;
+    }
+
+    @media (max-width: 700px) {
+      .trust-logo-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -252,18 +265,22 @@
           <h2>Organizations connected to this recruiting work.</h2>
           <p>
             As more approved logos become available, this section can expand into a full scrolling banner.
-            For now, this keeps the social proof clean and credible.
+            For now, this keeps the social proof clean, accurate, and professional.
           </p>
         </div>
 
         <div class="trust-logo-grid">
           <div class="trust-logo-card">
-            <img src="assets/logos/clients/client-1.jpg" alt="Client company logo">
+            <img src="assets/logos/client-1.jpg" alt="Client company logo 1">
+          </div>
+
+          <div class="trust-logo-card">
+            <img src="assets/logos/client-2.png" alt="Client company logo 2">
           </div>
         </div>
 
         <p class="trust-logo-note">
-          Keep future client logos inside <strong>assets/logos/clients/</strong>.
+          Your current files are being pulled from <strong>assets/logos/</strong>. If you later want cleaner organization, we can move them into a dedicated client logo folder.
         </p>
       </div>
     </section>
