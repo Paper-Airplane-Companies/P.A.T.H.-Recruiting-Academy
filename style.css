@@ -520,6 +520,67 @@ select {
   font-weight: 800;
 }
 
+/* Single trust logo section */
+
+.trust-logo-section {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.trust-logo-heading {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 2rem;
+}
+
+.trust-logo-heading h2 {
+  margin: 0.25rem 0 0.9rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.12;
+  color: var(--navy-deep);
+}
+
+.trust-logo-heading p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 1.03rem;
+}
+
+.trust-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.trust-logo-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 39, 71, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.trust-logo-card img {
+  max-width: 220px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.trust-logo-note {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--light-slate);
+  font-size: 0.92rem;
+}
+
 /* Founder */
 
 .founder-section {
@@ -784,7 +845,8 @@ select {
 @media (max-width: 640px) {
   .hero,
   .section,
-  .page-hero {
+  .page-hero,
+  .trust-logo-section {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
@@ -794,7 +856,8 @@ select {
   .two-column-layout h2,
   .founder-copy h2,
   .final-cta-card h2,
-  .page-hero h1 {
+  .page-hero h1,
+  .trust-logo-heading h2 {
     letter-spacing: -0.02em;
   }
 
@@ -840,5 +903,15 @@ select {
 
   .brand-text {
     font-size: 0.88rem;
+  }
+
+  .trust-logo-card {
+    min-height: 120px;
+    padding: 1.5rem;
+  }
+
+  .trust-logo-card img {
+    max-width: 180px;
+    max-height: 58px;
   }
 }
