@@ -6,7 +6,7 @@
   <title>Services | P.A.T.H. Recruiting Academy</title>
   <meta
     name="description"
-    content="Explore services from P.A.T.H. Recruiting Academy including recruiter training, framework implementation, phone screen design, hiring manager alignment, playbooks, and consulting support."
+    content="Explore services from P.A.T.H. Recruiting Academy including framework reviews, recruiter workshops, process redesign, full buildout support, and advisory services."
   />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -30,7 +30,7 @@
     .services-hero p,
     .services-section p,
     .services-cta p {
-      max-width: 780px;
+      max-width: 820px;
     }
 
     .services-badges {
@@ -43,16 +43,17 @@
     .services-badge {
       padding: 10px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(15, 39, 71, 0.12);
+      border: 1px solid rgba(15, 39, 71, 0.14);
       background: #ffffff;
       color: var(--navy);
-      font-weight: 600;
       font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .services-grid,
     .services-fit-grid,
     .services-process-grid,
+    .services-faq-grid,
     .services-cta-grid {
       display: grid;
       gap: 22px;
@@ -65,6 +66,7 @@
 
     .services-fit-grid,
     .services-process-grid,
+    .services-faq-grid,
     .services-cta-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -72,6 +74,7 @@
     .services-card,
     .services-fit-card,
     .services-process-card,
+    .services-faq-card,
     .services-cta-card {
       background: #ffffff;
       border: 1px solid rgba(15, 39, 71, 0.1);
@@ -83,6 +86,7 @@
     .services-card h3,
     .services-fit-card h3,
     .services-process-card h3,
+    .services-faq-card h3,
     .services-cta-card h3 {
       margin-top: 0;
       margin-bottom: 12px;
@@ -92,6 +96,7 @@
     .services-card p,
     .services-fit-card p,
     .services-process-card p,
+    .services-faq-card p,
     .services-cta-card p {
       margin-bottom: 0;
       line-height: 1.7;
@@ -119,6 +124,22 @@
       color: var(--gold);
     }
 
+    .services-price {
+      margin: 10px 0 14px;
+      color: var(--navy);
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .services-subprice {
+      display: block;
+      margin-top: 4px;
+      color: var(--light-slate);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
     .services-actions {
       display: flex;
       flex-wrap: wrap;
@@ -132,10 +153,21 @@
       color: var(--light-slate);
     }
 
+    .services-highlight {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(15, 39, 71, 0.04);
+      border: 1px solid rgba(15, 39, 71, 0.08);
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
     @media (max-width: 980px) {
       .services-grid,
       .services-fit-grid,
       .services-process-grid,
+      .services-faq-grid,
       .services-cta-grid {
         grid-template-columns: 1fr;
       }
@@ -149,6 +181,7 @@
       .services-card,
       .services-fit-card,
       .services-process-card,
+      .services-faq-card,
       .services-cta-card {
         padding: 24px;
       }
@@ -198,119 +231,107 @@
     <section class="services-hero section-light">
       <div class="services-wrap">
         <p class="eyebrow">Services</p>
-        <h1>Practical ways to bring P.A.T.H. into your recruiting team.</h1>
+        <h1>Clear ways to bring P.A.T.H. into your recruiting team.</h1>
         <p>
-          P.A.T.H. Recruiting Academy is built to help recruiting leaders and teams improve how recruiter
-          conversations are structured, coached, and used to drive better hiring outcomes. These services
-          are designed to move from theory into practical implementation.
+          P.A.T.H. Recruiting Academy is designed to help recruiting leaders and teams improve the
+          conversations that shape candidate engagement, alignment, and hiring outcomes. These offers
+          are structured to make the next step easier, whether you want a framework review, team training,
+          or a deeper recruiting process buildout.
         </p>
 
         <div class="services-badges" aria-label="Service themes">
-          <span class="services-badge">Training</span>
-          <span class="services-badge">Implementation</span>
-          <span class="services-badge">Phone Screen Design</span>
-          <span class="services-badge">Recruiting Playbooks</span>
+          <span class="services-badge">Framework Review</span>
+          <span class="services-badge">Recruiter Training</span>
+          <span class="services-badge">Process Redesign</span>
+          <span class="services-badge">Advisory Support</span>
         </div>
       </div>
     </section>
 
     <section class="services-section">
       <div class="services-wrap">
-        <p class="eyebrow">Core service offers</p>
-        <h2>Clear ways to improve recruiter execution, consistency, and alignment.</h2>
+        <p class="eyebrow">Packaged offers</p>
+        <h2>Start with the level of support that fits your team best.</h2>
         <p>
-          These are the most direct ways P.A.T.H. can support your organization. Some teams need training.
-          Others need structure. Others need help redesigning how recruiter conversations are happening today.
+          Not every team needs the same first step. Some want to understand the framework before doing
+          anything larger. Others already know recruiter conversation quality needs work and want direct
+          implementation support.
         </p>
 
         <div class="services-grid">
           <article class="services-card">
-            <span class="services-label">Service 1</span>
-            <h3>Recruiter Training Workshops</h3>
+            <span class="services-label">Offer 1</span>
+            <h3>P.A.T.H. Framework Review</h3>
+            <div class="services-price">
+              Starting at $1,500
+              <span class="services-subprice">Best for leaders who want to understand fit before a larger engagement</span>
+            </div>
             <p>
-              Train recruiters to lead more consultative, structured, and effective candidate conversations
-              that improve discovery, alignment, and next-step quality.
+              A focused session built to review your current recruiting conversation challenges and identify
+              where the P.A.T.H. model can improve recruiter behavior, candidate discovery, and hiring alignment.
             </p>
             <ul>
-              <li>P.A.T.H. conversation model overview</li>
-              <li>Question-driven recruiting approach</li>
-              <li>Candidate discovery and motivation work</li>
-              <li>Live examples and practical application</li>
+              <li>Discovery session</li>
+              <li>Overview of the P.A.T.H. model</li>
+              <li>Review of current conversation gaps</li>
+              <li>Simple recommendation summary</li>
             </ul>
           </article>
 
           <article class="services-card">
-            <span class="services-label">Service 2</span>
-            <h3>Framework Implementation Support</h3>
+            <span class="services-label">Offer 2</span>
+            <h3>Recruiter Conversation Workshop</h3>
+            <div class="services-price">
+              Starting at $3,500
+              <span class="services-subprice">Best for teams that want practical training and immediate lift</span>
+            </div>
             <p>
-              Put a repeatable conversation structure in place that recruiters can actually use and leaders
-              can coach across the team.
+              A live training workshop built to strengthen recruiter conversations, improve question flow,
+              and help recruiters move beyond early job pitching into stronger candidate discovery.
             </p>
             <ul>
-              <li>Framework customization by team need</li>
-              <li>Recruiter usage guidance</li>
-              <li>Manager and leader coaching support</li>
-              <li>Practical roll-out structure</li>
+              <li>P.A.T.H. framework training</li>
+              <li>Conversation examples and application</li>
+              <li>Question-driven recruiting principles</li>
+              <li>Practical usage guidance for recruiters</li>
             </ul>
           </article>
 
           <article class="services-card">
-            <span class="services-label">Service 3</span>
-            <h3>Phone Screen Design</h3>
+            <span class="services-label">Offer 3</span>
+            <h3>Phone Screen + Process Redesign Sprint</h3>
+            <div class="services-price">
+              Starting at $7,500
+              <span class="services-subprice">Best for teams that want implementation, not just training</span>
+            </div>
             <p>
-              Redesign early-stage recruiter conversations so qualification, candidate engagement, and
-              handoff quality improve before interviews ever begin.
+              A structured sprint focused on redesigning early recruiter conversations, improving phone
+              screen quality, and creating stronger process alignment before interviews begin.
             </p>
             <ul>
-              <li>Phone screen structure</li>
-              <li>Candidate discovery flow</li>
-              <li>Transition language and alignment points</li>
-              <li>Role-specific question design</li>
+              <li>Phone screen structure redesign</li>
+              <li>Question flow and discovery framework</li>
+              <li>Manager alignment recommendations</li>
+              <li>Implementation guidance and follow-up</li>
             </ul>
           </article>
 
           <article class="services-card">
-            <span class="services-label">Service 4</span>
-            <h3>Hiring Manager Alignment Tools</h3>
+            <span class="services-label">Offer 4</span>
+            <h3>Full P.A.T.H. Buildout</h3>
+            <div class="services-price">
+              Custom engagement
+              <span class="services-subprice">Best for organizations that want the full system built around their team</span>
+            </div>
             <p>
-              Improve how recruiting and hiring leaders align on role expectations, candidate signals, and
-              what quality actually looks like in the process.
+              A deeper engagement for organizations that want to build a more complete recruiting conversation
+              system across training, phone screens, tools, alignment, and implementation support.
             </p>
             <ul>
-              <li>Intake meeting structure</li>
-              <li>Alignment questions</li>
-              <li>Success profile clarification</li>
-              <li>Interview handoff support</li>
-            </ul>
-          </article>
-
-          <article class="services-card">
-            <span class="services-label">Service 5</span>
-            <h3>Recruiting Playbooks and Toolkits</h3>
-            <p>
-              Give your team usable materials that turn the framework into daily execution instead of
-              something that only lives in training.
-            </p>
-            <ul>
-              <li>Conversation guides</li>
-              <li>Question libraries</li>
-              <li>Phone screen templates</li>
-              <li>Objection handling frameworks</li>
-            </ul>
-          </article>
-
-          <article class="services-card">
-            <span class="services-label">Service 6</span>
-            <h3>Advisory and Consulting Support</h3>
-            <p>
-              Work through broader recruiting process issues where conversation quality, recruiter execution,
-              and process alignment are affecting hiring performance.
-            </p>
-            <ul>
-              <li>Team-level recruiting review</li>
-              <li>Execution gap analysis</li>
-              <li>Process quality support</li>
-              <li>Strategy discussion and guidance</li>
+              <li>Framework adaptation to your environment</li>
+              <li>Recruiter training and usage support</li>
+              <li>Phone screen and conversation tools</li>
+              <li>Broader recruiting process alignment</li>
             </ul>
           </article>
         </div>
@@ -319,34 +340,115 @@
 
     <section class="services-section section-light">
       <div class="services-wrap">
-        <p class="eyebrow">Best fit</p>
-        <h2>Who these services are designed for.</h2>
+        <p class="eyebrow">Ongoing support</p>
+        <h2>Keep momentum after the initial work is done.</h2>
         <p>
-          P.A.T.H. is a strong fit for organizations that care about improving the quality of the recruiting
-          conversation, not just increasing activity volume.
+          Some teams want a one-time engagement. Others want continued support while the framework is being
+          used, coached, and refined in the real world.
+        </p>
+
+        <div class="services-grid">
+          <article class="services-card">
+            <span class="services-label">Retainer Option</span>
+            <h3>Ongoing Advisory Support</h3>
+            <div class="services-price">
+              Starting at $1,500/month
+              <span class="services-subprice">For continued support, review, and practical refinement</span>
+            </div>
+            <p>
+              Advisory support for organizations that want continued guidance as recruiter conversations,
+              tools, and team execution evolve over time.
+            </p>
+            <ul>
+              <li>Recurring advisory support</li>
+              <li>Review of recruiter usage and gaps</li>
+              <li>Continued recommendations and refinement</li>
+              <li>Support for next-stage implementation issues</li>
+            </ul>
+          </article>
+
+          <article class="services-card">
+            <span class="services-label">Pricing Approach</span>
+            <h3>How pricing is handled</h3>
+            <p>
+              Pricing is based on the depth of support, level of customization, team size, and whether the
+              engagement is a focused review, a team training, or a larger implementation effort.
+            </p>
+            <div class="services-highlight">
+              Onsite delivery, expanded customization, and broader implementation support are quoted separately.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="services-wrap">
+        <p class="eyebrow">Best fit</p>
+        <h2>Who these offers are built for.</h2>
+        <p>
+          P.A.T.H. is a strong fit for teams that care about improving the quality of recruiter conversations,
+          not just increasing activity volume.
         </p>
 
         <div class="services-fit-grid">
           <article class="services-fit-card">
-            <h3>Internal Recruiting Teams</h3>
+            <h3>Talent Acquisition Leaders</h3>
             <p>
-              Teams that want more structure, better phone screens, stronger discovery, and more consistency
-              across recruiters.
+              Leaders who want a framework they can coach, reinforce, and use to improve recruiter execution.
             </p>
           </article>
 
           <article class="services-fit-card">
-            <h3>Talent Acquisition Leaders</h3>
+            <h3>Internal Recruiting Teams</h3>
             <p>
-              Leaders who want a framework they can coach, reinforce, and use to improve recruiting execution.
+              Teams that want stronger discovery, better phone screens, better alignment, and more consistency
+              across recruiters.
             </p>
           </article>
 
           <article class="services-fit-card">
             <h3>Growing Organizations</h3>
             <p>
-              Companies that need a better process as hiring pressure rises and the cost of weak conversations
-              becomes more visible.
+              Companies that need a more structured process as hiring pressure rises and weak conversations
+              become more expensive.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section section-light">
+      <div class="services-wrap">
+        <p class="eyebrow">How teams usually begin</p>
+        <h2>Most buyers do not start at the same place.</h2>
+        <p>
+          Some leaders want to review the framework first. Others already know they need training. Others
+          need help identifying which conversation and process problems matter most before choosing an offer.
+        </p>
+
+        <div class="services-process-grid">
+          <article class="services-process-card">
+            <h3>Start with a Framework Review</h3>
+            <p>
+              Best for leaders who want to understand the model and talk through team fit before deciding
+              on a bigger engagement.
+            </p>
+          </article>
+
+          <article class="services-process-card">
+            <h3>Start with Training</h3>
+            <p>
+              Best for teams that already know recruiter conversation quality needs to improve and want
+              practical help fast.
+            </p>
+          </article>
+
+          <article class="services-process-card">
+            <h3>Start with a Conversation</h3>
+            <p>
+              Best for organizations that want to talk through their recruiting process and identify the
+              strongest next step first.
             </p>
           </article>
         </div>
@@ -355,32 +457,31 @@
 
     <section class="services-section">
       <div class="services-wrap">
-        <p class="eyebrow">How engagement can start</p>
-        <h2>Not every team needs the same first step.</h2>
-        <p>
-          Some teams want a workshop first. Some want a framework overview. Some want to talk through what is
-          not working in their current recruiter conversations before deciding what support makes sense.
-        </p>
+        <p class="eyebrow">Common questions</p>
+        <h2>What leaders usually want to know before reaching out.</h2>
 
-        <div class="services-process-grid">
-          <article class="services-process-card">
-            <h3>Start with a Framework Review</h3>
+        <div class="services-faq-grid">
+          <article class="services-faq-card">
+            <h3>Do I need a full buildout to start?</h3>
             <p>
-              Best for teams that want to understand the model and see whether it fits their recruiting environment.
+              No. Many teams start with a framework review or workshop first, then expand based on what
+              makes sense for their team.
             </p>
           </article>
 
-          <article class="services-process-card">
-            <h3>Start with Training</h3>
+          <article class="services-faq-card">
+            <h3>Can this be customized by role or team?</h3>
             <p>
-              Best for teams that already know recruiter conversation quality needs to improve and want practical help fast.
+              Yes. The deeper the engagement, the more the tools, conversation design, and implementation
+              support can be adapted to your environment.
             </p>
           </article>
 
-          <article class="services-process-card">
-            <h3>Start with a Process Conversation</h3>
+          <article class="services-faq-card">
+            <h3>Do you work with both leadership and recruiters?</h3>
             <p>
-              Best for leaders who want to talk through gaps first and identify which service area matters most.
+              Yes. Some work is recruiter-facing. Some focuses on leader alignment, manager expectations,
+              and broader recruiting process quality.
             </p>
           </article>
         </div>
@@ -392,8 +493,8 @@
         <p class="eyebrow">Next step</p>
         <h2>Choose the next step that fits your team best.</h2>
         <p>
-          Whether you want to review the framework first or start a conversation about your recruiting team,
-          this is where to move next.
+          Whether you want to review the framework first or start a conversation about your recruiting
+          environment, this is where to move next.
         </p>
 
         <div class="services-cta-grid">
@@ -407,14 +508,14 @@
           <article class="services-cta-card">
             <h3>Request More Information</h3>
             <p>
-              Use the contact page to request the framework overview or ask about service support.
+              Use the contact page to ask about services, framework review, or support for your team.
             </p>
           </article>
 
           <article class="services-cta-card">
             <h3>Start a Conversation</h3>
             <p>
-              Share what your team wants to improve so the right next step is clearer.
+              Share what your team wants to improve so the strongest next step becomes clearer.
             </p>
           </article>
         </div>
@@ -425,7 +526,7 @@
         </div>
 
         <p class="services-note">
-          After this page is live, the next most important step is wiring your contact form into a real form backend or CRM.
+          Custom pricing is available for broader scope, onsite work, and expanded implementation support.
         </p>
       </div>
     </section>
