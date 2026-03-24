@@ -6,9 +6,175 @@
   <title>About | P.A.T.H. Recruiting Academy</title>
   <meta
     name="description"
-    content="Learn about P.A.T.H. Recruiting Academy and the modern recruiting philosophy behind better recruiter conversations and better hiring outcomes."
+    content="Learn about P.A.T.H. Recruiting Academy, the philosophy behind the framework, and the founder's mission to help recruiting teams improve conversation quality and hiring outcomes."
   />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-hero,
+    .about-section,
+    .about-cta {
+      padding: 72px 20px;
+    }
+
+    .about-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .about-hero h1,
+    .about-section h2,
+    .about-cta h2 {
+      margin-bottom: 16px;
+    }
+
+    .about-hero p,
+    .about-section p,
+    .about-cta p {
+      max-width: 780px;
+    }
+
+    .about-grid,
+    .about-values-grid,
+    .about-fit-grid,
+    .about-cta-grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
+    }
+
+    .about-values-grid,
+    .about-fit-grid,
+    .about-cta-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-card,
+    .about-value-card,
+    .about-fit-card,
+    .about-cta-card,
+    .about-image-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px;
+      backdrop-filter: blur(10px);
+    }
+
+    .about-card h3,
+    .about-value-card h3,
+    .about-fit-card h3,
+    .about-cta-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .about-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .about-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.95rem;
+    }
+
+    .about-list {
+      margin: 16px 0 0;
+      padding-left: 20px;
+    }
+
+    .about-list li {
+      margin-bottom: 10px;
+    }
+
+    .about-image-card {
+      text-align: center;
+      padding: 18px;
+    }
+
+    .about-image-card img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 18px;
+      display: block;
+      margin: 0 auto 18px;
+      object-fit: cover;
+    }
+
+    .about-image-card p {
+      margin: 0;
+      max-width: none;
+    }
+
+    .about-quote {
+      margin-top: 22px;
+      padding: 22px;
+      border-left: 4px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+    }
+
+    .about-quote p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .about-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .about-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: inherit;
+    }
+
+    .about-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .about-note {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 960px) {
+      .about-grid,
+      .about-values-grid,
+      .about-fit-grid,
+      .about-cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero,
+      .about-section,
+      .about-cta {
+        padding: 56px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -27,7 +193,8 @@
 
         <nav class="site-nav" id="siteNav">
           <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="framework.html">Framework</a>
           <a href="services.html">Services</a>
           <a href="contact.html" class="nav-button">Contact</a>
         </nav>
@@ -36,191 +203,218 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">About P.A.T.H.</p>
-        <h1>Built to improve the recruiter conversation that drives the hire.</h1>
+    <section class="about-hero">
+      <div class="about-wrap">
+        <p class="eyebrow">About P.A.T.H. Recruiting Academy</p>
+        <h1>Built to help recruiting teams improve the conversations that drive hiring outcomes.</h1>
         <p>
-          P.A.T.H. Recruiting Academy exists to help recruiting teams move beyond activity for activity’s sake
-          and build better candidate conversations that lead to better hiring outcomes.
+          P.A.T.H. Recruiting Academy was created around a simple idea: better recruiter conversations
+          lead to better hiring decisions. Too many recruiting teams are measured by activity without
+          enough attention paid to the quality of the conversation, the quality of alignment, and the
+          quality of the candidate experience that shapes results downstream.
         </p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container founder-grid">
-        <div class="founder-image-wrap">
-          <img
-            src="assets/images/brandon-labonte-headshot.png"
-            alt="Professional headshot of Brandon Labonte"
-            class="founder-image"
-          />
-        </div>
-
-        <div class="founder-copy">
-          <p class="eyebrow">Founder perspective</p>
-          <h2>A practical recruiting approach built for real hiring pressure.</h2>
-          <p>
-            P.A.T.H. Recruiting Academy was built around a simple belief: better hiring outcomes often begin with
-            better recruiter conversations. Too many recruiting teams are measured on activity alone while the
-            quality of the conversation, the clarity of candidate motivation, and the true return on recruiting
-            effort are left underdeveloped.
-          </p>
-          <p>
-            This approach is designed to help recruiters lead conversations with more structure, more confidence,
-            and more purpose—so hiring teams can improve alignment, reduce wasted interviews, and make stronger
-            hiring decisions.
-          </p>
+        <div class="about-badges" aria-label="Key themes">
+          <span class="about-badge">Question-Driven Recruiting</span>
+          <span class="about-badge">Candidate Discovery</span>
+          <span class="about-badge">Recruiter Consistency</span>
+          <span class="about-badge">Hiring Outcomes</span>
         </div>
       </div>
     </section>
 
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Why P.A.T.H. exists</p>
-          <h2>The metrics that matter are usually shaped long before the offer stage.</h2>
-          <p>
-            Interview acceptance, candidate engagement, hiring manager alignment, recruiter consistency, and
-            offer-stage confidence are not random outcomes. They are often shaped by the quality of the recruiter’s
-            conversation from the very beginning.
-          </p>
+    <section class="about-section">
+      <div class="about-wrap">
+        <div class="about-grid">
+          <div class="about-card">
+            <p class="eyebrow">Why P.A.T.H. exists</p>
+            <h2>A better way to guide recruiting conversations.</h2>
+            <p>
+              Most recruiting teams have scripts, intake meetings, and interview steps. What they often
+              do not have is a real conversation framework that helps recruiters uncover motivation,
+              understand dissatisfaction, explore timing, and create stronger fit alignment before the
+              process moves forward.
+            </p>
+            <p>
+              P.A.T.H. was built to close that gap by giving recruiters a structure they can actually use
+              in live conversations, not just a set of talking points or a theory that sounds good in training.
+            </p>
+
+            <ul class="about-list">
+              <li>Move beyond surface-level qualification and early job pitching.</li>
+              <li>Help candidates talk through what matters, not just what is on paper.</li>
+              <li>Create a framework recruiters can repeat, leaders can coach, and teams can scale.</li>
+              <li>Strengthen the connection between conversation quality and hiring performance.</li>
+            </ul>
+
+            <div class="about-quote">
+              <p>
+                The goal is not just to make recruiters sound better. The goal is to make conversations
+                more useful, more honest, and more aligned with better hiring outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-image-card">
+            <img
+              src="assets/images/brandon-labonte-headshot.png"
+              alt="Professional headshot of Brandon Labonte"
+            />
+            <p class="eyebrow">Founder</p>
+            <h3>Brandon Labonte</h3>
+            <p>
+              Recruiting leader, builder of structured hiring processes, and creator of the P.A.T.H.
+              framework for recruiting teams that want stronger conversations and better results.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="three-column-grid">
-          <article class="info-card">
-            <h3>Too Much Pitching</h3>
+    <section class="about-section">
+      <div class="about-wrap">
+        <p class="eyebrow">Core philosophy</p>
+        <h2>The principles behind the framework.</h2>
+        <p>
+          P.A.T.H. is built around the belief that recruiting should feel more consultative and less transactional.
+          Candidates make stronger decisions when they have the space to think, talk, and clarify what they actually
+          want. Recruiters perform better when they have structure, not just pressure to move fast.
+        </p>
+
+        <div class="about-values-grid">
+          <article class="about-value-card">
+            <h3>Questions over pitching</h3>
             <p>
-              Many recruiting conversations lean too heavily on selling the role before understanding what the
-              candidate actually wants, needs, or is trying to solve.
+              The recruiter guides the conversation through thoughtful questions instead of relying too early
+              on persuasion, pressure, or a generic role pitch.
             </p>
           </article>
 
-          <article class="info-card">
-            <h3>Not Enough Discovery</h3>
+          <article class="about-value-card">
+            <h3>Self-discovery over assumption</h3>
             <p>
-              Without structured discovery, recruiters miss the motivations, frustrations, and priorities that
-              determine whether a candidate will truly engage.
+              Better conversations help candidates verbalize frustration, goals, priorities, and fit for themselves.
             </p>
           </article>
 
-          <article class="info-card">
-            <h3>Weak Process Leverage</h3>
+          <article class="about-value-card">
+            <h3>Structure over instinct</h3>
             <p>
-              When recruiter conversations are inconsistent, teams lose control of quality, waste time in the
-              funnel, and struggle to improve outcomes at scale.
+              Recruiters need a repeatable process that improves consistency, coaching, and performance across the team.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-column-layout">
-        <div>
-          <p class="eyebrow">What P.A.T.H. focuses on</p>
-          <h2>A structured, consultative recruiting method that teams can actually use.</h2>
-          <p>
-            P.A.T.H. Recruiting Academy is designed for recruiting leaders, internal talent teams, and hiring
-            organizations that want a more consistent and more effective way to lead candidate conversations.
-          </p>
-        </div>
+    <section class="about-section">
+      <div class="about-wrap">
+        <p class="eyebrow">Who this is for</p>
+        <h2>P.A.T.H. is built for teams that want to improve real recruiting execution.</h2>
 
-        <div class="checklist-card">
-          <ul class="check-list">
-            <li>Question-driven candidate discovery</li>
-            <li>Better recruiter conversation control</li>
-            <li>Stronger fit and motivation alignment</li>
-            <li>Improved interview readiness</li>
-            <li>More consistent recruiter execution</li>
-            <li>Better hiring outcomes tied to better process quality</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-heading section-heading-center">
-          <p class="eyebrow">Who this is for</p>
-          <h2>Built for teams that want better conversations, not just more recruiting activity.</h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Corporate Recruiting Teams</h3>
-            <p>
-              For internal recruiting functions that want stronger consistency, better qualification, and better
-              hiring outcomes across the funnel.
-            </p>
-          </article>
-
-          <article class="service-card">
+        <div class="about-fit-grid">
+          <article class="about-fit-card">
             <h3>Talent Acquisition Leaders</h3>
             <p>
-              For leaders who want a more structured recruiting process that improves KPIs without relying on
-              guesswork or individual style alone.
+              Leaders who want a better coaching framework, stronger recruiter consistency, and more confidence
+              that their team is improving the conversations that matter most.
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="about-fit-card">
+            <h3>Internal Recruiting Teams</h3>
+            <p>
+              Teams that want to strengthen candidate discovery, phone screens, handoffs, manager alignment,
+              and the overall quality of the recruiting process.
+            </p>
+          </article>
+
+          <article class="about-fit-card">
             <h3>Growing Organizations</h3>
             <p>
-              For companies that need recruiter training, conversation frameworks, and practical systems that
-              scale with the business.
+              Companies that need more structure as hiring pressure increases and the cost of weak conversations
+              becomes more expensive.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What success looks like</p>
-          <h2>More clarity. Better alignment. Stronger hiring decisions.</h2>
-          <p>
-            The goal is not just to help recruiters sound better. The goal is to help organizations improve the
-            outcomes that matter most by improving the quality of the recruiting conversation itself.
-          </p>
-        </div>
+    <section class="about-section">
+      <div class="about-wrap">
+        <p class="eyebrow">What makes the approach practical</p>
+        <h2>This is meant to be used, coached, and repeated.</h2>
+        <p>
+          P.A.T.H. is not designed to live only in a slide deck. It is meant to show up in real recruiter behavior,
+          live phone screens, team coaching, hiring manager conversations, and the tools recruiters use every day.
+        </p>
 
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <h3>Candidate Engagement</h3>
-            <p>More meaningful conversations that surface real motivation and fit.</p>
-          </div>
+        <div class="about-values-grid">
+          <article class="about-value-card">
+            <h3>Conversation frameworks</h3>
+            <p>
+              Give recruiters a structure for guiding discovery, deepening relevance, and moving toward real alignment.
+            </p>
+          </article>
 
-          <div class="metric-card">
-            <h3>Recruiter Consistency</h3>
-            <p>Stronger process quality across recruiters, not just top performers.</p>
-          </div>
+          <article class="about-value-card">
+            <h3>Phone screen methodology</h3>
+            <p>
+              Improve the front end of the hiring process where many teams lose clarity, consistency, and control.
+            </p>
+          </article>
 
-          <div class="metric-card">
-            <h3>Hiring Alignment</h3>
-            <p>Better handoff quality between recruiting teams and hiring leaders.</p>
-          </div>
-
-          <div class="metric-card">
-            <h3>Hiring Outcomes</h3>
-            <p>Better interviews, stronger decisions, and less wasted effort in the funnel.</p>
-          </div>
+          <article class="about-value-card">
+            <h3>Playbooks and training tools</h3>
+            <p>
+              Translate the philosophy into practical materials leaders and recruiters can apply immediately.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta-section">
-      <div class="container final-cta-card">
+    <section class="about-cta">
+      <div class="about-wrap">
         <p class="eyebrow">Next step</p>
-        <h2>See how the framework can support your recruiting team.</h2>
+        <h2>Explore the framework or start the conversation.</h2>
         <p>
-          Explore the services, review the framework, and build a more structured approach to recruiter-led
-          candidate conversations.
+          Whether you want to understand the P.A.T.H. model first or talk about how it could support your
+          recruiting team, the next step is simple.
         </p>
-        <div class="hero-actions center-actions">
-          <a href="services.html" class="button button-primary">View Services</a>
-          <a href="contact.html" class="button button-secondary">Go to Contact Page</a>
+
+        <div class="about-cta-grid">
+          <article class="about-cta-card">
+            <h3>Read the Framework</h3>
+            <p>
+              See how P.A.T.H. is structured and how the conversation model works in practice.
+            </p>
+          </article>
+
+          <article class="about-cta-card">
+            <h3>Review Services</h3>
+            <p>
+              Explore the ways the framework can be delivered through training, implementation, and support.
+            </p>
+          </article>
+
+          <article class="about-cta-card">
+            <h3>Connect Directly</h3>
+            <p>
+              Use the contact page to request the framework overview or start a conversation about your team.
+            </p>
+          </article>
         </div>
+
+        <div class="about-buttons">
+          <a class="about-button" href="framework.html">Explore the Framework</a>
+          <a class="about-button" href="contact.html">Go to Contact Page</a>
+        </div>
+
+        <p class="about-note">
+          Once this page is live, the next best update is your services page so the offer structure matches
+          the stronger positioning on Home, Framework, and About.
+        </p>
       </div>
     </section>
   </main>
@@ -232,11 +426,14 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
-        <p class="footer-text">Better Recruiter Conversations. Better Hiring Outcomes.</p>
+        <p class="footer-text">
+          Better Recruiter Conversations. Better Hiring Outcomes.
+        </p>
       </div>
 
       <div class="footer-links">
         <a href="about.html">About</a>
+        <a href="framework.html">Framework</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
