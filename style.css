@@ -78,36 +78,20 @@ select {
 
 .brand {
   display: inline-flex;
-  align-items: center;
-  gap: 0.9rem;
+  align-items: baseline;
+  gap: 0.45rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  flex-shrink: 0;
-}
-
-.site-logo {
-  height: 64px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-
-.brand-copy {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.02;
 }
 
 .brand-mark {
   color: var(--navy);
-  font-size: 1.7rem;
-  font-weight: 800;
+  font-size: 1.4rem;
 }
 
 .brand-text {
   color: var(--charcoal);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
 }
 
 .site-nav {
@@ -170,6 +154,7 @@ select {
   font-size: 0.96rem;
   transition: var(--transition);
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -427,14 +412,16 @@ select {
 }
 
 .info-card h3,
-.metric-card h3 {
+.metric-card h3,
+.content-card h3 {
   margin: 0 0 0.75rem;
   color: var(--navy);
   font-size: 1.18rem;
 }
 
 .info-card p,
-.metric-card p {
+.metric-card p,
+.content-card p {
   margin: 0;
   color: var(--slate);
 }
@@ -518,67 +505,6 @@ select {
   color: var(--navy);
   font-size: 0.9rem;
   font-weight: 800;
-}
-
-/* Single trust logo section */
-
-.trust-logo-section {
-  padding: 4.5rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-}
-
-.trust-logo-heading {
-  text-align: center;
-  max-width: 860px;
-  margin: 0 auto 2rem;
-}
-
-.trust-logo-heading h2 {
-  margin: 0.25rem 0 0.9rem;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  line-height: 1.12;
-  color: var(--navy-deep);
-}
-
-.trust-logo-heading p {
-  margin: 0;
-  color: var(--slate);
-  font-size: 1.03rem;
-}
-
-.trust-logo-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.trust-logo-card {
-  background: #ffffff;
-  border: 1px solid rgba(15, 39, 71, 0.1);
-  border-radius: 24px;
-  padding: 2rem;
-  box-shadow: var(--shadow-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 140px;
-}
-
-.trust-logo-card img {
-  max-width: 220px;
-  max-height: 70px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.trust-logo-note {
-  text-align: center;
-  margin-top: 1rem;
-  color: var(--light-slate);
-  font-size: 0.92rem;
 }
 
 /* Founder */
@@ -679,19 +605,9 @@ select {
   align-items: center;
 }
 
-.footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
 .footer-brand .brand-mark,
 .footer-brand .brand-text {
   color: var(--white);
-}
-
-.footer-brand .site-logo {
-  height: 52px;
 }
 
 .footer-text,
@@ -721,7 +637,7 @@ select {
   text-align: right;
 }
 
-/* Page helper styles for future pages */
+/* Page helper styles */
 
 .page-hero {
   padding: 4.5rem 0 3rem;
@@ -748,6 +664,90 @@ select {
   border-radius: var(--radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow-soft);
+}
+
+/* Forms */
+
+.lead-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  font-size: 0.95rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--charcoal);
+  transition: var(--transition);
+  outline: none;
+  appearance: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--light-slate);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 4px rgba(15, 39, 71, 0.08);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-field select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--navy) 50%),
+    linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 3px),
+    calc(100% - 14px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.8rem;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-note {
+  margin: 1rem 0 0;
+  color: var(--light-slate);
+  font-size: 0.95rem;
 }
 
 /* Responsive */
@@ -800,7 +800,8 @@ select {
 @media (max-width: 900px) {
   .three-column-grid,
   .services-grid,
-  .hero-highlights {
+  .hero-highlights,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
@@ -840,13 +841,16 @@ select {
   .menu-toggle {
     display: block;
   }
+
+  .form-field-full {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 640px) {
   .hero,
   .section,
-  .page-hero,
-  .trust-logo-section {
+  .page-hero {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
@@ -856,8 +860,7 @@ select {
   .two-column-layout h2,
   .founder-copy h2,
   .final-cta-card h2,
-  .page-hero h1,
-  .trust-logo-heading h2 {
+  .page-hero h1 {
     letter-spacing: -0.02em;
   }
 
@@ -879,7 +882,8 @@ select {
   .service-card,
   .checklist-card,
   .panel-card,
-  .final-cta-card {
+  .final-cta-card,
+  .content-card {
     padding: 1.25rem;
   }
 
@@ -888,30 +892,17 @@ select {
   }
 
   .hero-actions,
-  .center-actions {
+  .center-actions,
+  .form-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .site-logo {
-    height: 52px;
-  }
-
   .brand-mark {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .brand-text {
-    font-size: 0.88rem;
-  }
-
-  .trust-logo-card {
-    min-height: 120px;
-    padding: 1.5rem;
-  }
-
-  .trust-logo-card img {
-    max-width: 180px;
-    max-height: 58px;
+    font-size: 0.95rem;
   }
 }
