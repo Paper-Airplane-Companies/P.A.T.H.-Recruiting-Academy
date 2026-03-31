@@ -3,299 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The P.A.T.H. Framework | P.A.T.H. Recruiting Academy</title>
+  <title>Framework | P.A.T.H. Recruiting Academy</title>
   <meta
     name="description"
-    content="Explore the P.A.T.H. Recruiting Framework, a structured conversation model that helps recruiting teams improve candidate discovery, recruiter consistency, interview alignment, and hiring outcomes."
+    content="Explore the P.A.T.H. Recruiting Academy framework and see how better recruiter conversations lead to better hiring outcomes."
   />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .framework-hero {
-      padding: 72px 0 48px;
-    }
-
-    .framework-hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .framework-hero-copy h1 {
-      max-width: 900px;
-      margin-bottom: 24px;
-    }
-
-    .framework-hero-copy p {
-      max-width: 760px;
-    }
-
-    .framework-intro {
-      font-size: 1.08rem;
-      line-height: 1.8;
-      margin-bottom: 28px;
-    }
-
-    .framework-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .framework-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(12, 34, 66, 0.14);
-      background: #ffffff;
-      color: #0c2242;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .framework-summary-card {
-      background: #0c2242;
-      color: #ffffff;
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 18px 40px rgba(12, 34, 66, 0.16);
-    }
-
-    .framework-summary-card .eyebrow {
-      color: #d4b066;
-      margin-bottom: 16px;
-    }
-
-    .framework-summary-card h2 {
-      color: #ffffff;
-      margin-bottom: 18px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-    }
-
-    .framework-summary-card p {
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 20px;
-      line-height: 1.75;
-    }
-
-    .framework-summary-list {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .framework-summary-list li {
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .framework-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .framework-card {
-      background: #ffffff;
-      border: 1px solid rgba(12, 34, 66, 0.1);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 12px 28px rgba(12, 34, 66, 0.06);
-    }
-
-    .framework-card h3 {
-      margin-top: 0;
-      margin-bottom: 14px;
-    }
-
-    .framework-card ul {
-      margin: 16px 0 0;
-      padding-left: 20px;
-    }
-
-    .framework-card li {
-      margin-bottom: 12px;
-      line-height: 1.65;
-    }
-
-    .framework-stage-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .framework-stage-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .framework-stage-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .framework-stage-letter {
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 1.05rem;
-      flex-shrink: 0;
-    }
-
-    .framework-stage-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .framework-stage-label {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .framework-stage-card h3 {
-      color: #ffffff;
-      margin: 0;
-    }
-
-    .framework-stage-card p {
-      color: rgba(255, 255, 255, 0.92);
-      line-height: 1.75;
-    }
-
-    .framework-stage-card ul {
-      margin: 16px 0 0;
-      padding-left: 20px;
-    }
-
-    .framework-stage-card li {
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    .framework-results-grid,
-    .framework-fit-grid,
-    .framework-next-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .framework-result-card,
-    .framework-fit-card,
-    .framework-next-card {
-      background: #ffffff;
-      border: 1px solid rgba(12, 34, 66, 0.1);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: 0 12px 28px rgba(12, 34, 66, 0.06);
-    }
-
-    .framework-result-card h3,
-    .framework-fit-card h3,
-    .framework-next-card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-
-    .framework-result-card p,
-    .framework-fit-card p,
-    .framework-next-card p {
-      margin-bottom: 0;
-      line-height: 1.7;
-    }
-
-    .framework-cta-box {
-      background: #ffffff;
-      border: 1px solid rgba(12, 34, 66, 0.1);
-      border-radius: 28px;
-      padding: 40px;
-      box-shadow: 0 16px 36px rgba(12, 34, 66, 0.08);
-    }
-
-    .framework-cta-box p {
-      max-width: 760px;
-    }
-
-    .framework-cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .framework-note {
-      margin-top: 18px;
-      color: #5f6d83;
-      font-size: 0.96rem;
-    }
-
-    @media (max-width: 980px) {
-      .framework-hero-grid,
-      .framework-card-grid,
-      .framework-stage-grid,
-      .framework-results-grid,
-      .framework-fit-grid,
-      .framework-next-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .framework-hero {
-        padding: 56px 0 36px;
-      }
-
-      .framework-summary-card,
-      .framework-card,
-      .framework-stage-card,
-      .framework-result-card,
-      .framework-fit-card,
-      .framework-next-card,
-      .framework-cta-box {
-        padding: 24px;
-      }
-
-      .framework-cta-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .framework-cta-actions .button {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
         <a href="index.html" class="brand">
-          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
-          <div class="brand-copy">
-            <span class="brand-mark">P.A.T.H.</span>
-            <span class="brand-text">Recruiting Academy</span>
-          </div>
+          <span class="brand-mark">P.A.T.H.</span>
+          <span class="brand-text">Recruiting Academy</span>
         </a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
@@ -307,7 +28,7 @@
         <nav class="site-nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="framework.html" aria-current="page">Framework</a>
+          <a href="framework.html">Framework</a>
           <a href="services.html">Services</a>
           <a href="contact.html" class="nav-button">Contact</a>
         </nav>
@@ -316,46 +37,77 @@
   </header>
 
   <main>
-    <section class="section section-light framework-hero">
-      <div class="container framework-hero-grid">
-        <div class="framework-hero-copy">
-          <p class="eyebrow">The P.A.T.H. Framework</p>
-          <h1>A structured recruiting conversation model built to improve quality, alignment, and hiring outcomes.</h1>
-          <p class="framework-intro">
-            P.A.T.H. is a question-driven recruiting framework designed to help recruiters lead better conversations
-            from the very beginning. Instead of relying on instinct, generic scripts, or early job pitching, the framework
-            helps recruiters uncover motivation, surface dissatisfaction, clarify fit, and create stronger alignment
-            throughout the hiring process.
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">The Framework</p>
+        <h1>A better recruiting conversation changes everything that follows.</h1>
+        <p>
+          The P.A.T.H. Recruiting Academy framework is built to help recruiters move beyond surface-level
+          qualification and job pitching, and into structured candidate discovery that improves alignment,
+          engagement, and hiring outcomes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column-layout">
+        <div>
+          <p class="eyebrow">Why it matters</p>
+          <h2>The recruiting KPI problem usually starts much earlier than teams think.</h2>
+          <p>
+            Many organizations focus heavily on activity, volume, and top-of-funnel motion. But the
+            outcomes leadership cares about most are often shaped by the quality of the recruiter’s
+            conversation long before the offer stage.
           </p>
-
-          <div class="hero-actions">
-            <a href="contact.html" class="button button-primary">Request the Framework Overview</a>
-            <a href="services.html" class="button button-secondary">View Services</a>
-          </div>
-
-          <div class="framework-badge-row">
-            <span class="framework-badge">Better Candidate Discovery</span>
-            <span class="framework-badge">More Recruiter Consistency</span>
-            <span class="framework-badge">Stronger Interview Alignment</span>
-            <span class="framework-badge">Better Hiring ROI</span>
-          </div>
         </div>
 
-        <div class="framework-summary-card">
-          <p class="eyebrow">What P.A.T.H. solves</p>
-          <h2>The KPI and ROI gaps too many recruiting teams forget about.</h2>
-          <p>
-            Too many teams track activity without improving outcomes. P.A.T.H. helps organizations strengthen
-            the parts of recruiting that directly affect hiring performance.
-          </p>
-          <ul class="framework-summary-list">
-            <li>Better candidate engagement</li>
-            <li>Stronger recruiter consistency</li>
-            <li>Better interview alignment</li>
-            <li>Fewer wasted conversations</li>
-            <li>Improved offer-stage confidence</li>
-            <li>Stronger return on recruiting effort</li>
+        <div class="checklist-card">
+          <ul class="check-list">
+            <li>Candidate engagement starts in discovery</li>
+            <li>Interview quality starts in early alignment</li>
+            <li>Offer confidence starts with better understanding</li>
+            <li>Recruiter consistency starts with structure</li>
+            <li>Hiring ROI improves when wasted conversations decrease</li>
+            <li>Better outcomes begin with better conversations</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What P.A.T.H. is built to solve</p>
+          <h2>Too many recruiter conversations sound active without actually moving the process forward.</h2>
+          <p>
+            When recruiters rely too heavily on generic screens, instinct, or role pitching, important things
+            get missed. Motivation stays unclear. Dissatisfaction stays hidden. Fit gets overestimated.
+            And teams lose leverage later in the funnel.
+          </p>
+        </div>
+
+        <div class="three-column-grid">
+          <article class="info-card">
+            <h3>Surface-Level Qualification</h3>
+            <p>
+              Resumes, titles, and years of experience matter, but they do not explain what is actually driving
+              a candidate to consider change.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Inconsistent Recruiter Execution</h3>
+            <p>
+              Without a repeatable framework, conversation quality varies too much from recruiter to recruiter.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Weak Hiring Alignment</h3>
+            <p>
+              When discovery is weak, interviews, feedback, and offers are built on incomplete understanding.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -363,34 +115,58 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Why this framework matters</p>
-          <h2>The quality of the recruiting conversation shapes more than most teams realize.</h2>
+          <p class="eyebrow">How the framework works</p>
+          <h2>A structured path from curiosity to alignment.</h2>
           <p>
-            Interview quality, candidate engagement, recruiter confidence, hiring manager alignment, and even offer-stage
-            outcomes are often influenced long before the offer ever happens. P.A.T.H. is designed to strengthen that
-            earlier part of the process so teams can reduce wasted effort and create better decisions throughout the funnel.
+            P.A.T.H. is designed to help recruiters guide the conversation in a more consultative way. The goal
+            is not pressure. The goal is clarity. Better questions help candidates surface what matters, while
+            giving recruiters a stronger foundation for qualification, alignment, and next steps.
           </p>
         </div>
 
-        <div class="framework-card-grid">
-          <article class="framework-card">
-            <h3>What most teams do</h3>
-            <ul>
-              <li>Lead too quickly with the role instead of the candidate.</li>
-              <li>Rely on personality instead of a repeatable conversation structure.</li>
-              <li>Confuse activity with quality.</li>
-              <li>Move candidates forward without enough clarity on motivation or fit.</li>
-            </ul>
+        <div class="services-grid">
+          <article class="info-card">
+            <h3>Discovery</h3>
+            <p>
+              Guide candidates to talk through what is working, what is not, and what would need to be true for
+              a new opportunity to actually matter.
+            </p>
           </article>
 
-          <article class="framework-card">
-            <h3>What P.A.T.H. changes</h3>
-            <ul>
-              <li>Recruiters guide the conversation with more control and purpose.</li>
-              <li>Candidates do more of the talking and more of the thinking.</li>
-              <li>Motivation, dissatisfaction, and priorities are surfaced earlier.</li>
-              <li>Recruiting teams gain a structure that can be coached, measured, and repeated.</li>
-            </ul>
+          <article class="info-card">
+            <h3>Awareness</h3>
+            <p>
+              Help candidates think more clearly about their current situation, priorities, frustrations, and
+              future goals.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Alignment</h3>
+            <p>
+              Connect the right opportunity to the right motivations so the process feels relevant, not forced.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Consistency</h3>
+            <p>
+              Give recruiters a repeatable conversation structure they can use across roles, industries, and teams.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Quality</h3>
+            <p>
+              Improve the signal gathered in early conversations so interviews and hiring decisions are stronger.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Outcome Focus</h3>
+            <p>
+              Keep the framework tied to what leadership actually cares about: hiring performance, not just activity.
+            </p>
           </article>
         </div>
       </div>
@@ -399,135 +175,55 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-heading section-heading-center">
-          <p class="eyebrow">How the model works</p>
-          <h2>The four parts of P.A.T.H. in a live recruiting conversation.</h2>
-          <p>
-            This is not a script to memorize word for word. It is a conversation architecture that helps recruiters move
-            with intention, ask better questions, and create stronger next-step decisions.
-          </p>
+          <p class="eyebrow">What it helps improve</p>
+          <h2>The outcomes teams often try to fix too late.</h2>
         </div>
 
-        <div class="framework-stage-grid">
-          <article class="framework-stage-card">
-            <div class="framework-stage-top">
-              <div class="framework-stage-letter">P</div>
-              <div class="framework-stage-meta">
-                <span class="framework-stage-label">Stage One</span>
-                <h3>Permission and Positioning</h3>
-              </div>
-            </div>
-            <p>
-              The recruiter sets the tone by lowering resistance, creating safety, and positioning the conversation as
-              a consultative discussion rather than a job pitch.
-            </p>
-            <ul>
-              <li>Create enough trust and permission for the candidate to have a real conversation.</li>
-              <li>Lower pressure and invite honesty early.</li>
-              <li>Set up the recruiter as a guide, not just a promoter of the role.</li>
-            </ul>
-          </article>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <h3>Candidate Engagement</h3>
+            <p>Better conversations create stronger interest and more meaningful participation.</p>
+          </div>
 
-          <article class="framework-stage-card">
-            <div class="framework-stage-top">
-              <div class="framework-stage-letter">A</div>
-              <div class="framework-stage-meta">
-                <span class="framework-stage-label">Stage Two</span>
-                <h3>Awareness and Discovery</h3>
-              </div>
-            </div>
-            <p>
-              The recruiter helps the candidate talk through what is happening in their current situation, what is going
-              well, what is not, and what they actually want next.
-            </p>
-            <ul>
-              <li>Surface real motivations, frustrations, priorities, and goals.</li>
-              <li>Go beyond resume facts and generic interest.</li>
-              <li>Create a deeper understanding of what matters to the candidate.</li>
-            </ul>
-          </article>
+          <div class="metric-card">
+            <h3>Interview Quality</h3>
+            <p>Stronger early discovery leads to better interviews and better evaluation.</p>
+          </div>
 
-          <article class="framework-stage-card">
-            <div class="framework-stage-top">
-              <div class="framework-stage-letter">T</div>
-              <div class="framework-stage-meta">
-                <span class="framework-stage-label">Stage Three</span>
-                <h3>Tension and Consequence</h3>
-              </div>
-            </div>
-            <p>
-              Once priorities and frustrations are clear, the recruiter helps the candidate think through the cost of
-              staying where they are and why change may matter now.
-            </p>
-            <ul>
-              <li>Help the candidate connect current reality to the consequences of doing nothing.</li>
-              <li>Clarify seriousness, timing, and decision energy.</li>
-              <li>Reveal whether the opportunity is truly relevant.</li>
-            </ul>
-          </article>
+          <div class="metric-card">
+            <h3>Offer Alignment</h3>
+            <p>Clearer motivations reduce surprises and hesitation later in the process.</p>
+          </div>
 
-          <article class="framework-stage-card">
-            <div class="framework-stage-top">
-              <div class="framework-stage-letter">H</div>
-              <div class="framework-stage-meta">
-                <span class="framework-stage-label">Stage Four</span>
-                <h3>Hiring Alignment and Next Step</h3>
-              </div>
-            </div>
-            <p>
-              The recruiter links what the candidate has said to the opportunity, the process, and the next step.
-              This creates stronger alignment before interviews.
-            </p>
-            <ul>
-              <li>Move forward only when there is meaningful fit and relevance.</li>
-              <li>Reduce disconnect between early interest and real intent.</li>
-              <li>Create cleaner handoffs between recruiting and hiring teams.</li>
-            </ul>
-          </article>
+          <div class="metric-card">
+            <h3>Hiring ROI</h3>
+            <p>Less wasted effort, better recruiter leverage, and stronger process quality.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What it improves</p>
-          <h2>The outcomes tied to better recruiter conversations.</h2>
+      <div class="container two-column-layout">
+        <div>
+          <p class="eyebrow">Why teams work with P.A.T.H.</p>
+          <h2>Having a framework is helpful. Knowing how to implement it is where the value grows.</h2>
           <p>
-            P.A.T.H. is designed to improve the quality of execution early in the process so the rest of the funnel gets
-            stronger, cleaner, and more aligned.
+            The framework is not just a concept. It is designed to be usable inside real recruiting pressure,
+            real hiring team dynamics, and real performance expectations. That is where training, coaching,
+            and implementation support matter.
           </p>
         </div>
 
-        <div class="framework-results-grid">
-          <article class="framework-result-card">
-            <h3>Candidate Engagement</h3>
-            <p>More meaningful conversations that get beyond surface-level interest.</p>
-          </article>
-
-          <article class="framework-result-card">
-            <h3>Recruiter Consistency</h3>
-            <p>A repeatable structure that makes recruiter quality more coachable and less random.</p>
-          </article>
-
-          <article class="framework-result-card">
-            <h3>Interview Quality</h3>
-            <p>Better early-stage clarity leads to stronger interviews and fewer wasted handoffs.</p>
-          </article>
-
-          <article class="framework-result-card">
-            <h3>Hiring Manager Alignment</h3>
-            <p>Clearer expectations and stronger fit conversations before the interview begins.</p>
-          </article>
-
-          <article class="framework-result-card">
-            <h3>Offer-Stage Confidence</h3>
-            <p>Fewer surprises later because motivations and priorities were uncovered earlier.</p>
-          </article>
-
-          <article class="framework-result-card">
-            <h3>Hiring ROI</h3>
-            <p>Better conversation quality helps reduce wasted effort throughout the recruiting process.</p>
-          </article>
+        <div class="checklist-card">
+          <ul class="check-list">
+            <li>Train recruiters to use the framework in live conversations</li>
+            <li>Improve phone screen structure and consistency</li>
+            <li>Align discovery with hiring manager expectations</li>
+            <li>Strengthen objection handling without pressure tactics</li>
+            <li>Improve recruiter confidence and control</li>
+            <li>Connect process quality to better hiring outcomes</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -535,68 +231,50 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Who it is built for</p>
-          <h2>Ideal for teams that want more control over conversation quality.</h2>
+          <p class="eyebrow">What implementation can look like</p>
+          <h2>Practical support for teams that want more than just theory.</h2>
           <p>
-            The framework is designed for leaders and recruiting teams that want stronger structure, better coaching,
-            and better hiring outcomes tied to how conversations are actually being led.
+            P.A.T.H. can be applied through recruiter training, conversation design, phone screen frameworks,
+            manager alignment work, and practical tools that teams can use right away.
           </p>
         </div>
 
-        <div class="framework-fit-grid">
-          <article class="framework-fit-card">
-            <h3>Internal Recruiting Teams</h3>
-            <p>For organizations that want better consistency, stronger phone screens, and better early-stage alignment.</p>
+        <div class="three-column-grid">
+          <article class="content-card">
+            <h3>Training</h3>
+            <p>
+              Equip recruiters with a consistent conversation method they can use across searches and candidate types.
+            </p>
           </article>
 
-          <article class="framework-fit-card">
-            <h3>Talent Acquisition Leaders</h3>
-            <p>For leaders who want a practical framework they can train, coach, and measure across the team.</p>
+          <article class="content-card">
+            <h3>Framework Tools</h3>
+            <p>
+              Turn the methodology into usable questions, guides, scorecards, and process tools.
+            </p>
           </article>
 
-          <article class="framework-fit-card">
-            <h3>Growing Companies</h3>
-            <p>For businesses that need a more structured recruiting process as hiring volume and pressure increase.</p>
+          <article class="content-card">
+            <h3>Process Support</h3>
+            <p>
+              Help recruiting leaders connect better conversations to better performance across the hiring funnel.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section final-cta-section">
-      <div class="container">
-        <div class="framework-cta-box">
-          <p class="eyebrow">Next step</p>
-          <h2>See how the framework can work inside your recruiting team.</h2>
-          <p>
-            Whether you want recruiter training, a stronger phone screen process, a practical conversation structure,
-            or a broader recruiting playbook, the framework is the place to begin.
-          </p>
-
-          <div class="framework-next-grid">
-            <article class="framework-next-card">
-              <h3>Review Services</h3>
-              <p>See the ways P.A.T.H. can be delivered through training, implementation, and practical support.</p>
-            </article>
-
-            <article class="framework-next-card">
-              <h3>Request the Overview</h3>
-              <p>Use the contact page to request the framework overview and start with a lower-pressure next step.</p>
-            </article>
-
-            <article class="framework-next-card">
-              <h3>Start a Conversation</h3>
-              <p>Talk through your recruiting process, team challenges, and what better conversation quality could improve.</p>
-            </article>
-          </div>
-
-          <div class="framework-cta-actions">
-            <a href="services.html" class="button button-secondary">View Services</a>
-            <a href="contact.html" class="button button-primary">Go to Contact Page</a>
-          </div>
-
-          <p class="framework-note">
-            Once this page is live, the rest of the site should follow this same shell so every page feels like one brand, not separate templates.
-          </p>
+      <div class="container final-cta-card">
+        <p class="eyebrow">Next step</p>
+        <h2>See how the framework could fit your recruiting team.</h2>
+        <p>
+          Request the framework, explore the service options, and take the next step toward stronger recruiter
+          conversations and better hiring outcomes.
+        </p>
+        <div class="hero-actions center-actions">
+          <a href="contact.html" class="button button-primary">Request the Framework</a>
+          <a href="services.html" class="button button-secondary">View Services</a>
         </div>
       </div>
     </section>
@@ -609,9 +287,7 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
-        <p class="footer-text">
-          Better Recruiter Conversations. Better Hiring Outcomes.
-        </p>
+        <p class="footer-text">Better Recruiter Conversations. Better Hiring Outcomes.</p>
       </div>
 
       <div class="footer-links">
