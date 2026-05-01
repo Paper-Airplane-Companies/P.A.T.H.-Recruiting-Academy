@@ -3,13 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Thank You | P.A.T.H. Recruiting Academy</title>
+
   <meta
     name="description"
     content="Thank you for reaching out to P.A.T.H. Recruiting Academy."
   />
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
+    /* Uniform header/logo control to match the rest of the site */
+
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .site-logo {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+      display: block !important;
+      flex: 0 0 64px !important;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.1;
+    }
+
+    .brand-mark {
+      color: #0f2747;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-text {
+      color: #1f2937;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .site-nav a {
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: #c6a96b;
+    }
+
+    .nav-button {
+      border: 1px solid #0f2747;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: #0f2747 !important;
+    }
+
+    .nav-button:hover {
+      background: #0f2747;
+      color: #ffffff !important;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
     .thankyou-section {
       padding: 88px 20px;
       min-height: calc(100vh - 220px);
@@ -61,6 +161,54 @@
       color: var(--light-slate);
     }
 
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+        border: 0;
+        background: transparent;
+        padding: 0.35rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 999px;
+        background: #0f2747;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 86px;
+        right: 1rem;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid rgba(15, 39, 71, 0.08);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(15, 39, 71, 0.12);
+      }
+
+      .site-nav.active {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 0.9rem 0.75rem;
+        border-radius: 12px;
+      }
+
+      .nav-button {
+        text-align: center;
+      }
+    }
+
     @media (max-width: 700px) {
       .thankyou-card {
         padding: 28px;
@@ -76,14 +224,45 @@
         text-align: center;
       }
     }
+
+    @media (max-width: 640px) {
+      .topbar {
+        min-height: 76px;
+      }
+
+      .site-logo {
+        width: 54px !important;
+        height: 54px !important;
+        max-width: 54px !important;
+        max-height: 54px !important;
+        flex-basis: 54px !important;
+      }
+
+      .brand-mark {
+        font-size: 1rem;
+      }
+
+      .brand-text {
+        font-size: 0.86rem;
+      }
+
+      .site-nav {
+        top: 76px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
-        <a href="index.html" class="brand">
-          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
+        <a href="index.html" class="brand" aria-label="P.A.T.H. Recruiting Academy Home">
+          <img
+            src="assets/logos/icon-only-logo.png"
+            alt="P.A.T.H. Recruiting Academy logo"
+            class="site-logo"
+          />
           <div class="brand-copy">
             <span class="brand-mark">P.A.T.H.</span>
             <span class="brand-text">Recruiting Academy</span>
@@ -112,20 +291,23 @@
       <div class="thankyou-wrap">
         <div class="thankyou-card">
           <p class="eyebrow">Thank you</p>
+
           <h1>Your request has been received.</h1>
+
           <p>
-            Thanks for taking the next step with P.A.T.H. Recruiting Academy. Right now this page is
-            part of the site flow while the form is still waiting to be connected to a real backend or CRM.
-            Once we wire that up, this step will become part of your actual lead capture process.
+            Thanks for reaching out to P.A.T.H. Recruiting Academy. Your request was submitted successfully,
+            and we’ll follow up with the framework overview or the next-step information that best matches
+            your interest.
           </p>
 
           <div class="thankyou-actions">
+            <a href="index.html" class="button button-secondary">Return Home</a>
             <a href="framework.html" class="button button-secondary">Explore the Framework</a>
             <a href="services.html" class="button button-primary">View Services</a>
           </div>
 
           <p class="thankyou-note">
-            Next build step after this: connect the contact form to Formspree or HubSpot so submissions are captured automatically.
+            In the meantime, you can review the framework, explore service options, or return to the homepage.
           </p>
         </div>
       </div>
@@ -139,6 +321,7 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
+
         <p class="footer-text">
           Better Recruiter Conversations. Better Hiring Outcomes.
         </p>
