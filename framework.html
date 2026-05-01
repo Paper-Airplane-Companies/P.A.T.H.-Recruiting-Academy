@@ -3,20 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Framework | P.A.T.H. Recruiting Academy</title>
+
   <meta
     name="description"
     content="Explore the P.A.T.H. Recruiting Academy framework and see how better recruiter conversations lead to better hiring outcomes."
   />
+
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Uniform header/logo control to match homepage */
+
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .site-logo {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+      display: block !important;
+      flex: 0 0 64px !important;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.1;
+    }
+
+    .brand-mark {
+      color: #0f2747;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-text {
+      color: #1f2937;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .site-nav a {
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: #c6a96b;
+    }
+
+    .nav-button {
+      border: 1px solid #0f2747;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: #0f2747 !important;
+    }
+
+    .nav-button:hover {
+      background: #0f2747;
+      color: #ffffff !important;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+        border: 0;
+        background: transparent;
+        padding: 0.35rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 999px;
+        background: #0f2747;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 86px;
+        right: 1rem;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid rgba(15, 39, 71, 0.08);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(15, 39, 71, 0.12);
+      }
+
+      .site-nav.active {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 0.9rem 0.75rem;
+        border-radius: 12px;
+      }
+
+      .nav-button {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        min-height: 76px;
+      }
+
+      .site-logo {
+        width: 54px !important;
+        height: 54px !important;
+        max-width: 54px !important;
+        max-height: 54px !important;
+        flex-basis: 54px !important;
+      }
+
+      .brand-mark {
+        font-size: 1rem;
+      }
+
+      .brand-text {
+        font-size: 0.86rem;
+      }
+
+      .site-nav {
+        top: 76px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
-        <a href="index.html" class="brand">
-          <span class="brand-mark">P.A.T.H.</span>
-          <span class="brand-text">Recruiting Academy</span>
+        <a href="index.html" class="brand" aria-label="P.A.T.H. Recruiting Academy Home">
+          <img
+            src="assets/logos/icon-only-logo.png"
+            alt="P.A.T.H. Recruiting Academy logo"
+            class="site-logo"
+          />
+          <div class="brand-copy">
+            <span class="brand-mark">P.A.T.H.</span>
+            <span class="brand-text">Recruiting Academy</span>
+          </div>
         </a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
@@ -28,7 +211,7 @@
         <nav class="site-nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="framework.html">Framework</a>
+          <a href="framework.html" aria-current="page">Framework</a>
           <a href="services.html">Services</a>
           <a href="contact.html" class="nav-button">Contact</a>
         </nav>
@@ -40,7 +223,9 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">The Framework</p>
+
         <h1>A better recruiting conversation changes everything that follows.</h1>
+
         <p>
           The P.A.T.H. Recruiting Academy framework is built to help recruiters move beyond surface-level
           qualification and job pitching, and into structured candidate discovery that improves alignment,
@@ -53,7 +238,9 @@
       <div class="container two-column-layout">
         <div>
           <p class="eyebrow">Why it matters</p>
+
           <h2>The recruiting KPI problem usually starts much earlier than teams think.</h2>
+
           <p>
             Many organizations focus heavily on activity, volume, and top-of-funnel motion. But the
             outcomes leadership cares about most are often shaped by the quality of the recruiter’s
@@ -78,7 +265,9 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">What P.A.T.H. is built to solve</p>
+
           <h2>Too many recruiter conversations sound active without actually moving the process forward.</h2>
+
           <p>
             When recruiters rely too heavily on generic screens, instinct, or role pitching, important things
             get missed. Motivation stays unclear. Dissatisfaction stays hidden. Fit gets overestimated.
@@ -116,7 +305,9 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">How the framework works</p>
+
           <h2>A structured path from curiosity to alignment.</h2>
+
           <p>
             P.A.T.H. is designed to help recruiters guide the conversation in a more consultative way. The goal
             is not pressure. The goal is clarity. Better questions help candidates surface what matters, while
@@ -176,6 +367,7 @@
       <div class="container">
         <div class="section-heading section-heading-center">
           <p class="eyebrow">What it helps improve</p>
+
           <h2>The outcomes teams often try to fix too late.</h2>
         </div>
 
@@ -207,7 +399,9 @@
       <div class="container two-column-layout">
         <div>
           <p class="eyebrow">Why teams work with P.A.T.H.</p>
+
           <h2>Having a framework is helpful. Knowing how to implement it is where the value grows.</h2>
+
           <p>
             The framework is not just a concept. It is designed to be usable inside real recruiting pressure,
             real hiring team dynamics, and real performance expectations. That is where training, coaching,
@@ -232,7 +426,9 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">What implementation can look like</p>
+
           <h2>Practical support for teams that want more than just theory.</h2>
+
           <p>
             P.A.T.H. can be applied through recruiter training, conversation design, phone screen frameworks,
             manager alignment work, and practical tools that teams can use right away.
@@ -267,11 +463,14 @@
     <section class="section final-cta-section">
       <div class="container final-cta-card">
         <p class="eyebrow">Next step</p>
+
         <h2>See how the framework could fit your recruiting team.</h2>
+
         <p>
           Request the framework, explore the service options, and take the next step toward stronger recruiter
           conversations and better hiring outcomes.
         </p>
+
         <div class="hero-actions center-actions">
           <a href="contact.html" class="button button-primary">Request the Framework</a>
           <a href="services.html" class="button button-secondary">View Services</a>
@@ -287,6 +486,7 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
+
         <p class="footer-text">Better Recruiter Conversations. Better Hiring Outcomes.</p>
       </div>
 
