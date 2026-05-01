@@ -3,13 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>About | P.A.T.H. Recruiting Academy</title>
+
   <meta
     name="description"
     content="Learn about P.A.T.H. Recruiting Academy, the founder behind the framework, and the experience that shaped this question-driven recruiting approach."
   />
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
+    /* Uniform header/logo control to match homepage */
+
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .site-logo {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+      display: block !important;
+      flex: 0 0 64px !important;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.1;
+    }
+
+    .brand-mark {
+      color: #0f2747;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-text {
+      color: #1f2937;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .site-nav a {
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: #c6a96b;
+    }
+
+    .nav-button {
+      border: 1px solid #0f2747;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: #0f2747 !important;
+    }
+
+    .nav-button:hover {
+      background: #0f2747;
+      color: #ffffff !important;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+        border: 0;
+        background: transparent;
+        padding: 0.35rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 999px;
+        background: #0f2747;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 86px;
+        right: 1rem;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid rgba(15, 39, 71, 0.08);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(15, 39, 71, 0.12);
+      }
+
+      .site-nav.active {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 0.9rem 0.75rem;
+        border-radius: 12px;
+      }
+
+      .nav-button {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        min-height: 76px;
+      }
+
+      .site-logo {
+        width: 54px !important;
+        height: 54px !important;
+        max-width: 54px !important;
+        max-height: 54px !important;
+        flex-basis: 54px !important;
+      }
+
+      .brand-mark {
+        font-size: 1rem;
+      }
+
+      .brand-text {
+        font-size: 0.86rem;
+      }
+
+      .site-nav {
+        top: 76px;
+      }
+    }
+
+    /* About page styling */
+
     .about-hero,
     .about-section,
     .about-cta {
@@ -59,7 +235,7 @@
     .about-cta-card,
     .about-image-card {
       background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(15, 39, 71, 0.1);
       border-radius: 18px;
       padding: 26px;
       backdrop-filter: blur(10px);
@@ -116,8 +292,8 @@
     }
 
     .about-image-card p {
-      margin: 0;
-      max-width: none;
+      margin: 0 auto;
+      max-width: 620px;
     }
 
     .about-quote {
@@ -184,12 +360,17 @@
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
-        <a href="index.html" class="brand">
-          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
+        <a href="index.html" class="brand" aria-label="P.A.T.H. Recruiting Academy Home">
+          <img
+            src="assets/logos/icon-only-logo.png"
+            alt="P.A.T.H. Recruiting Academy logo"
+            class="site-logo"
+          />
           <div class="brand-copy">
             <span class="brand-mark">P.A.T.H.</span>
             <span class="brand-text">Recruiting Academy</span>
@@ -217,13 +398,16 @@
     <section class="about-hero">
       <div class="about-wrap">
         <p class="eyebrow">About P.A.T.H. Recruiting Academy</p>
+
         <h1>Built from real recruiting experience across every level of hiring.</h1>
+
         <p>
           P.A.T.H. Recruiting Academy was created by Brandon Labonte, an HR and recruiting leader with
           experience dating back to 2009. Over the course of his career, Brandon has worked in consulting,
           high-volume recruiting, operational hiring, and senior HR leadership roles as high as Vice President
           of Human Resources.
         </p>
+
         <p>
           That experience shaped one clear belief: better hiring starts with better conversations. Across
           industries, job levels, and company environments, candidates responded far more strongly when the
@@ -245,7 +429,9 @@
         <div class="about-grid">
           <div class="about-card">
             <p class="eyebrow">Why P.A.T.H. exists</p>
+
             <h2>A better way to guide recruiting conversations.</h2>
+
             <p>
               Brandon has recruited for and hired roles at nearly every level of the organization — from
               executive positions like COO and CFO to skilled trades, field labor, and frontline operational
@@ -253,6 +439,7 @@
               invited to talk about their current reality, what was missing, and what they actually wanted next,
               the conversation became more honest, more useful, and more productive.
             </p>
+
             <p>
               P.A.T.H. was built from that pattern recognition. It was not created as a theory-only training
               model or another script-heavy recruiting system. It was built from real hiring experience across
@@ -280,8 +467,11 @@
               src="assets/images/brandon-labonte-headshot.png"
               alt="Professional headshot of Brandon Labonte"
             />
+
             <p class="eyebrow">Founder</p>
+
             <h3>Brandon Labonte</h3>
+
             <p>
               HR and recruiting leader, consultant, and builder of practical hiring systems designed to improve
               recruiter conversations, candidate alignment, and hiring outcomes.
@@ -294,7 +484,9 @@
     <section class="about-section">
       <div class="about-wrap">
         <p class="eyebrow">What makes this perspective different</p>
+
         <h2>Experience across the full spectrum of hiring.</h2>
+
         <p>
           P.A.T.H. is shaped by more than one lane of recruiting. It was built from years of seeing hiring
           challenges from multiple angles: leadership, consulting, volume recruiting, operational urgency,
@@ -332,7 +524,9 @@
     <section class="about-section">
       <div class="about-wrap">
         <p class="eyebrow">Core philosophy</p>
+
         <h2>The principles behind the framework.</h2>
+
         <p>
           P.A.T.H. is built around the belief that recruiting should feel more consultative and less transactional.
           Candidates make stronger decisions when they have the space to think, talk, and clarify what they actually
@@ -368,6 +562,7 @@
     <section class="about-section">
       <div class="about-wrap">
         <p class="eyebrow">Who this is for</p>
+
         <h2>P.A.T.H. is built for teams that want to improve real recruiting execution.</h2>
 
         <div class="about-fit-grid">
@@ -401,7 +596,9 @@
     <section class="about-section">
       <div class="about-wrap">
         <p class="eyebrow">What makes the approach practical</p>
+
         <h2>This is meant to be used, coached, and repeated.</h2>
+
         <p>
           P.A.T.H. is not designed to live only in a slide deck. It is meant to show up in real recruiter behavior,
           live phone screens, team coaching, hiring manager conversations, and the tools recruiters use every day.
@@ -435,7 +632,9 @@
     <section class="about-cta">
       <div class="about-wrap">
         <p class="eyebrow">Next step</p>
+
         <h2>Explore the framework or start the conversation.</h2>
+
         <p>
           Whether you want to understand the P.A.T.H. model first or talk about how it could support your
           recruiting team, the next step is simple.
@@ -483,6 +682,7 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
+
         <p class="footer-text">
           Better Recruiter Conversations. Better Hiring Outcomes.
         </p>
