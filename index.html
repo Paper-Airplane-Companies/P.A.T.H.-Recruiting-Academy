@@ -3,16 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>P.A.T.H. Recruiting Academy | Better Recruiter Conversations. Better Hiring Outcomes.</title>
+
   <meta
     name="description"
     content="P.A.T.H. Recruiting Academy helps recruiting teams improve hiring outcomes through better recruiter conversations, stronger candidate discovery, and more consistent hiring processes."
   />
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
+    /* Emergency header/logo control.
+       This is intentionally inside index.html so it overrides older CSS. */
+
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 39, 71, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .topbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .site-logo {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+      display: block !important;
+      flex: 0 0 64px !important;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.1;
+    }
+
+    .brand-mark {
+      color: #0f2747;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-text {
+      color: #1f2937;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .site-nav a {
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: #c6a96b;
+    }
+
+    .nav-button {
+      border: 1px solid #0f2747;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: #0f2747 !important;
+    }
+
+    .nav-button:hover {
+      background: #0f2747;
+      color: #ffffff !important;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
     .trust-logo-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       max-width: 760px;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+        border: 0;
+        background: transparent;
+        padding: 0.35rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 999px;
+        background: #0f2747;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 86px;
+        right: 1rem;
+        left: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid rgba(15, 39, 71, 0.08);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(15, 39, 71, 0.12);
+      }
+
+      .site-nav.active {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 0.9rem 0.75rem;
+        border-radius: 12px;
+      }
+
+      .nav-button {
+        text-align: center;
+      }
     }
 
     @media (max-width: 700px) {
@@ -21,14 +170,45 @@
         max-width: 420px;
       }
     }
+
+    @media (max-width: 640px) {
+      .topbar {
+        min-height: 76px;
+      }
+
+      .site-logo {
+        width: 54px !important;
+        height: 54px !important;
+        max-width: 54px !important;
+        max-height: 54px !important;
+        flex-basis: 54px !important;
+      }
+
+      .brand-mark {
+        font-size: 1rem;
+      }
+
+      .brand-text {
+        font-size: 0.86rem;
+      }
+
+      .site-nav {
+        top: 76px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <div class="topbar">
-        <a href="index.html" class="brand">
-          <img src="assets/logos/icon-only-logo.png" alt="P.A.T.H. Recruiting Academy logo" class="site-logo">
+        <a href="index.html" class="brand" aria-label="P.A.T.H. Recruiting Academy Home">
+          <img
+            src="assets/logos/icon-only-logo.png"
+            alt="P.A.T.H. Recruiting Academy logo"
+            class="site-logo"
+          />
           <div class="brand-copy">
             <span class="brand-mark">P.A.T.H.</span>
             <span class="brand-text">Recruiting Academy</span>
@@ -57,12 +237,15 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Florida-based, serving teams nationwide</p>
+
           <h1>Better Recruiter Conversations. Better Hiring Outcomes.</h1>
+
           <p class="hero-subtext">
             P.A.T.H. Recruiting Academy helps recruiting teams improve the hiring KPIs and ROI most
             organizations overlook by training recruiters to lead more structured, consultative, and
             effective candidate conversations.
           </p>
+
           <p class="hero-subtext">
             Support is available through framework reviews, recruiter workshops, and recruiting process redesign.
           </p>
@@ -77,10 +260,12 @@
               <strong>Built for real recruiting teams</strong>
               <span>Practical systems, not theory alone</span>
             </div>
+
             <div class="highlight-card">
               <strong>Focused on outcomes</strong>
               <span>Conversations that move the metrics that matter</span>
             </div>
+
             <div class="highlight-card">
               <strong>Designed for consistency</strong>
               <span>Clear structure recruiters can actually use</span>
@@ -91,11 +276,14 @@
         <div class="hero-panel">
           <div class="panel-card">
             <p class="panel-label">What P.A.T.H. solves</p>
+
             <h2>The KPI and ROI gaps too many recruiting teams forget about.</h2>
+
             <p>
               Too many teams track activity without improving outcomes. P.A.T.H. helps organizations
               strengthen the parts of recruiting that directly affect hiring performance.
             </p>
+
             <ul class="panel-list">
               <li>Better candidate engagement</li>
               <li>Stronger recruiter consistency</li>
@@ -113,7 +301,9 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">What makes the approach different</p>
+
           <h2>A more structured way to lead the recruiting conversation.</h2>
+
           <p>
             P.A.T.H. is built around question-driven candidate discovery. Instead of relying on job
             pitching, recruiters are trained to guide conversations that uncover motivation, clarify fit,
@@ -153,7 +343,9 @@
       <div class="container two-column-layout">
         <div>
           <p class="eyebrow">Core focus areas</p>
+
           <h2>Training that turns conversation quality into hiring leverage.</h2>
+
           <p>
             P.A.T.H. Recruiting Academy is designed for recruiting leaders and teams that want to improve
             the full candidate conversation cycle, not just sourcing volume or top-of-funnel activity.
@@ -177,6 +369,7 @@
       <div class="container">
         <div class="section-heading section-heading-center">
           <p class="eyebrow">How support can be delivered</p>
+
           <h2>Flexible ways to bring P.A.T.H. into your recruiting team.</h2>
         </div>
 
@@ -230,7 +423,9 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">What this helps improve</p>
+
           <h2>The outcomes that matter more than just activity.</h2>
+
           <p>
             P.A.T.H. is built to help recruiting teams focus less on motion for the sake of motion and more
             on the quality of the conversation, the quality of alignment, and the quality of the hiring result.
@@ -265,7 +460,9 @@
       <div class="container">
         <div class="trust-logo-heading">
           <p class="eyebrow">Organizations connected to this work</p>
+
           <h2>Where the P.A.T.H. approach has been applied.</h2>
+
           <p>
             Selected organizations connected to this recruiting work and framework development.
           </p>
@@ -273,11 +470,11 @@
 
         <div class="trust-logo-grid">
           <div class="trust-logo-card">
-            <img src="assets/logos/client-1.jpg" alt="Client company logo 1">
+            <img src="assets/logos/client-1.jpg" alt="Client company logo 1" />
           </div>
 
           <div class="trust-logo-card">
-            <img src="assets/logos/client-2.png" alt="Client company logo 2">
+            <img src="assets/logos/client-2.png" alt="Client company logo 2" />
           </div>
         </div>
       </div>
@@ -295,16 +492,20 @@
 
         <div class="founder-copy">
           <p class="eyebrow">Meet the founder</p>
+
           <h2>Built for recruiting teams that want stronger conversations, not just more activity.</h2>
+
           <p>
             P.A.T.H. Recruiting Academy was created to help recruiting leaders and teams move beyond generic
             scripts, surface-level qualification, and job pitching. The focus is simple: create better recruiter
             conversations that lead to better hiring outcomes.
           </p>
+
           <p>
             The methodology is built for practical use, real recruiting pressure, and the metrics leadership teams
             care about most.
           </p>
+
           <a href="about.html" class="button button-secondary">Read the Founder Story</a>
         </div>
       </div>
@@ -313,10 +514,13 @@
     <section class="section final-cta-section">
       <div class="container final-cta-card">
         <p class="eyebrow">Ready to build a stronger recruiting process?</p>
+
         <h2>Start with the next step that fits your team.</h2>
+
         <p>
           Review the offers, explore the framework, and take the next step toward better recruiter conversations and better hiring outcomes.
         </p>
+
         <div class="hero-actions center-actions">
           <a href="services.html" class="button button-primary">View Services</a>
           <a href="contact.html" class="button button-secondary">Contact PATH</a>
@@ -332,6 +536,7 @@
           <span class="brand-mark">P.A.T.H.</span>
           <span class="brand-text">Recruiting Academy</span>
         </a>
+
         <p class="footer-text">
           Better Recruiter Conversations. Better Hiring Outcomes.
         </p>
