@@ -33,3 +33,51 @@ if (menuToggle && siteNav) {
     }
   });
 }
+
+const linkedInUrl = "https://www.linkedin.com/in/brandonlabonte73";
+
+const personalFooterRow = document.querySelector(".personal-footer .footer-row");
+if (personalFooterRow && !personalFooterRow.querySelector('a[href*="linkedin.com"]')) {
+  const linkedInItem = document.createElement("div");
+  const linkedInLink = document.createElement("a");
+  linkedInLink.href = linkedInUrl;
+  linkedInLink.target = "_blank";
+  linkedInLink.rel = "noopener noreferrer";
+  linkedInLink.textContent = "LinkedIn";
+  linkedInItem.appendChild(linkedInLink);
+  personalFooterRow.appendChild(linkedInItem);
+}
+
+const siteFooterLinks = document.querySelector(".site-footer .footer-links");
+if (siteFooterLinks && !siteFooterLinks.querySelector('a[href*="linkedin.com"]')) {
+  const linkedInLink = document.createElement("a");
+  linkedInLink.href = linkedInUrl;
+  linkedInLink.target = "_blank";
+  linkedInLink.rel = "noopener noreferrer";
+  linkedInLink.textContent = "LinkedIn";
+  siteFooterLinks.appendChild(linkedInLink);
+}
+
+const inquiryType = document.getElementById("inquiry-type");
+const speakingDetails = document.getElementById("speaking-details");
+const speakingType = document.getElementById("speaking-type");
+
+function syncSpeakingFields() {
+  if (!inquiryType || !speakingDetails) return;
+
+  const isSpeakingInquiry = inquiryType.value === "Speaking or Event Inquiry";
+  speakingDetails.hidden = !isSpeakingInquiry;
+
+  speakingDetails.querySelectorAll("input, select, textarea").forEach((field) => {
+    field.disabled = !isSpeakingInquiry;
+  });
+
+  if (speakingType) {
+    speakingType.required = isSpeakingInquiry;
+  }
+}
+
+if (inquiryType && speakingDetails) {
+  inquiryType.addEventListener("change", syncSpeakingFields);
+  syncSpeakingFields();
+}
