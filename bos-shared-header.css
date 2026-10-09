@@ -108,3 +108,41 @@ body.bos-legacy-page {
   .personal-header .personal-nav { top: 70px; }
   .personal-header .wordmark > span { display: none; }
 }
+
+/* Align older interior pages with the homepage's warm editorial palette.
+   Keep deliberate dark emphasis panels and their white text intact. */
+body.bos-legacy-page {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body.bos-legacy-page .about-hero,
+body.bos-legacy-page .page-hero {
+  background: var(--bos-paper);
+  color: var(--bos-ink);
+}
+body.bos-legacy-page .about-section,
+body.bos-legacy-page .section:not(.section-dark),
+body.bos-legacy-page .page {
+  background-color: var(--bos-paper);
+}
+body.bos-legacy-page .about-hero h1,
+body.bos-legacy-page .about-section h2,
+body.bos-legacy-page .page-hero h1,
+body.bos-legacy-page .page > .wrap > h1,
+body.bos-legacy-page .page .topic h2,
+body.bos-legacy-page .section:not(.section-dark) h2 {
+  color: var(--bos-ink);
+}
+body.bos-legacy-page .eyebrow {
+  color: var(--bos-accent);
+}
+body.bos-legacy-page .topic,
+body.bos-legacy-page .about-card,
+body.bos-legacy-page .about-value-card,
+body.bos-legacy-page .about-fit-card,
+body.bos-legacy-page .about-cta-card,
+body.bos-legacy-page .about-image-card {
+  border-color: var(--bos-line);
+}
+body.bos-legacy-page .page .callout {
+  background: var(--bos-ink);
+}
