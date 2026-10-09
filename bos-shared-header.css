@@ -1,0 +1,110 @@
+/* Shared BOS personal-site header, applied to all six primary pages. */
+:root {
+  --bos-paper: #f5f0e8;
+  --bos-ink: #18201d;
+  --bos-muted: #5f665f;
+  --bos-line: #d9cfc1;
+  --bos-accent: #a65f3c;
+}
+body.bos-legacy-page {
+  background: var(--bos-paper);
+  color: var(--bos-ink);
+}
+.personal-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(245,240,232,.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(24,32,29,.08);
+}
+.personal-header .wrap {
+  width: min(1180px, calc(100% - 40px));
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.personal-header .nav-row {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.personal-header .wordmark {
+  color: var(--bos-ink);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+.personal-header .wordmark strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.personal-header .wordmark > span {
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--bos-muted);
+}
+.personal-header .personal-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.personal-header .personal-nav a {
+  color: var(--bos-ink);
+  text-decoration: none;
+  font-size: .92rem;
+  font-weight: 650;
+}
+.personal-header .personal-nav a:hover,
+.personal-header .personal-nav a[aria-current="page"] {
+  color: var(--bos-accent);
+}
+.personal-header .nav-connect {
+  border-bottom: 2px solid var(--bos-accent);
+  padding-bottom: 3px;
+}
+.personal-header .menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+.personal-header .menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--bos-ink);
+}
+@media (max-width: 980px) {
+  .personal-header .personal-nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background: #fffdfa;
+    padding: 18px;
+    border: 1px solid var(--bos-line);
+    box-shadow: 0 18px 40px rgba(24,32,29,.12);
+  }
+  .personal-header .personal-nav.active { display: flex; }
+  .personal-header .personal-nav a { width: 100%; padding: 8px; }
+  .personal-header .menu-toggle { display: block; }
+}
+@media (max-width: 720px) {
+  .personal-header .wrap { width: min(100% - 28px, 1180px); }
+  .personal-header .nav-row { min-height: 70px; }
+  .personal-header .personal-nav { top: 70px; }
+  .personal-header .wordmark > span { display: none; }
+}
