@@ -71,18 +71,25 @@
         }
       }
     </style>
-  </head>
-  <body>
-    <header>
-      <nav class="simple-nav">
-        <a href="index.html" class="home">Brandon Labonte <span aria-hidden="true">|</span> <span class="home-tagline">Ideas about hiring &amp; leadership</span></a
-        ><a href="better-hiring-conversations.html"
-          >Better Hiring Conversations</a
-        ><a href="framework.html">P.A.T.H.</a
-        ><a href="speaking.html">Speaking</a><a href="about.html">About</a
-        ><a href="contact.html">Connect</a>
+    <link rel="stylesheet" href="bos-shared-header.css" />
+</head>
+  <body class="bos-legacy-page">
+    <header class="personal-header">
+    <div class="wrap nav-row">
+      <a href="index.html" class="wordmark" aria-label="Brandon Labonte home">
+        <strong>Brandon Labonte <span aria-hidden="true">|</span></strong>
+        <span>Ideas about hiring & leadership</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="personal-nav" id="siteNav">
+        <a href="better-hiring-conversations.html">Writing</a>
+        <a href="framework.html">P.A.T.H.</a>
+        <a href="speaking.html" aria-current="page">Speaking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-connect">Connect</a>
       </nav>
-    </header>
+    </div>
+  </header>
     <main class="page">
       <div class="wrap">
         <p class="eyebrow">Speaking • Workshops • Podcasts</p>
@@ -135,5 +142,6 @@
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
