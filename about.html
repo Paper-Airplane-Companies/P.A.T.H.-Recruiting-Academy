@@ -68,7 +68,10 @@
 
     .brand-copy {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
       justify-content: center;
       line-height: 1.1;
     }
@@ -375,13 +378,8 @@
     <div class="container">
       <div class="topbar">
         <a href="index.html" class="brand" aria-label="Brandon Labonte home">
-          <img
-            src="assets/logos/icon-only-logo.png"
-            alt="P.A.T.H. Recruiting Academy logo"
-            class="site-logo"
-          />
           <div class="brand-copy">
-            <span class="brand-mark">Brandon Labonte</span>
+            <span class="brand-mark">Brandon Labonte <span aria-hidden="true">|</span></span>
             <span class="brand-text">Better Hiring Conversations</span>
           </div>
         </a>
